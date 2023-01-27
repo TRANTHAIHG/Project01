@@ -1,0 +1,13 @@
+quy tắc BEM
+xem lại box sizing bài 5 
+css gradien
+time với title để trong một khối
+240
+20
+background ; no rêpat
+background position:center chú ý
+
+background: size
+giãn
+mảgrin
+padding

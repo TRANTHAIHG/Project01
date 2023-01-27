@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="text-align: center; ">
+        <button id="reset" type="button" style="background-color:rgb(0, 128, 255) ; box-shadow: 1px 1px 1px 1px;margin-right: 5px; ">reset </button>
+        <button id="btnup" type="button" style="background-color: rgb(0, 128, 255) ; box-shadow: 1px 1px 1px 1px;margin-right: 5px;">up size</button>
+        <button id="btndown" type="button" style="background-color:rgb(0, 128, 255) ; box-shadow: 1px 1px 1px 1px;margin-right: 5px;"> down size</button>
+
+    </div>
+    <div id="paragraph" style="text-align: center;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste ullam earum vel mollitia fugit impedit vitae sapiente recusandae! Quia maxime sed quam eveniet fugit mollitia ratione itaque, dicta officiis quibusdam.</div>
+    <script>
+        var sizeDefault = 16;
+        var paragraph = document.getElementById('paragraph');
+        paragraph.style.fontSize = sizeDefault + 'px';
+
+        var btnup = document.getElementById('btnup');
+        btnup.addEventListener('click', function() {
+            sizeDefault = sizeDefault * 1.4;
+            paragraph.style.fontSize = sizeDefault + 'px';
+        });
+
+        var btndown = document.getElementById('btndown');
+        btndown.addEventListener('click', function() {
+            sizeDefault = sizeDefault * 0.6;
+            paragraph.style.fontSize = sizeDefault + 'px';
+        });
+        var reset = document.getElementById('reset');
+        reset.addEventListener('click', function() {
+            paragraph.style.fontSize = '16px';
+        });
+    </script>
+</body>
+
+</html>

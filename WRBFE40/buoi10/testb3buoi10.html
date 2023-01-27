@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        N = prompt(' mời bạn nhập N');
+        M = prompt(' mời bạn nhập M');
+        K = prompt(' mời bạn nhập K');
+
+        var biendem = 0
+        for (var i = N; i <= M; i++) {
+            if (i % K == 0) {
+
+                biendem = biendem + i;
+
+            }
+        }
+        document.write(' tổng  là ' + biendem)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

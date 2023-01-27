@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("p").hide();
+
+                $(".button0").click(function() {
+                    $(".class").toggle();
+                    $(".class1,.class2,.class3").hide();
+
+
+
+                });
+                $(".button1").click(function() {
+                    $(".class1").toggle();
+                    $(".class,.class2,.class3").hide();
+
+
+                });
+                $(".button2").click(function() {
+                    $(".class2").toggle();
+                    $(".class1,.class,.class3").hide();
+
+
+
+                });
+                $(".button3").click(function() {
+                    $(".class3").toggle();
+                    $(".class1,.class2,.class").hide();
+
+
+
+
+                });
+
+            });
+        </script>
+    </head>
+    <style>
+        .menu {
+            background-color: orange;
+            width: 100%;
+            height: 100px;
+        }
+        
+        .menubtn {
+            float: right;
+        }
+        
+        .menutieude {
+            float: left;
+            margin: 5px 5px 5px 5px;
+        }
+        
+        .tieude2 {
+            height: 50px;
+            text-align: center;
+        }
+        
+        .main-content {
+            height: 400px;
+            background-color: orange;
+            text-align: center;
+            padding-top: 50px;
+        }
+        
+        .button1 {
+            float: right;
+        }
+        
+        .button2 {
+            float: right;
+        }
+        
+        .button3 {
+            float: right;
+        }
+        
+        .button0 {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <div class="tieude2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro facilis, odit reiciendis consequatur nostrum aliquam accusantium suscipit laborum dolores labore, ullam ducimus deleniti vel placeat modi quia minima quae sed?</div>
+        <div class="main-content">
+            <h1 style="text-align:center ; color:white;padding-bottom: 10px;"> alert</h1>
+            <h1 style="font-size: 10px;text-align: center;color: white;padding-bottom: 10px;">alert</h1>
+
+
+
+
+            <button>enter</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

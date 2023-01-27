@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .li {
+            height: 50px;
+            width: 100%;
+            background-color: blue;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div id="todolist">
+            <h1> my to do list</h1>
+            <div>
+                <input type="text" id="ipt" placeholder="text....">
+                <button id="btn2">add</button>
+
+                <ol>
+                </ol>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        $(document).ready(function() {
+
+
+
+            $("#btn2").click(function() {
+                if ($('#ipt').val() == 0) {
+                    alert('chưa nhập nội dung')
+                } else
+                    $("ol").append("<li '<p class='element'>' + $('#ipt').val() + '</p>'<button class='Element'>Click me</button></li>");
+            });
+            $("#Element").click(function() {
+                $("h2").hide();
+            });
+
+
+
+
+        });
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

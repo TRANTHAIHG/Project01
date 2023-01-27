@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        .minispace {
+            padding-left: 115px;
+        }
+        
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        
+        #myBtn:hover {
+            background-color: #555;
+        }
+        
+        h2 {
+            padding: 25px 0;
+            text-align: center;
+            color: #fff;
+            background: #7c8490;
+        }
+        
+        footer {
+            background: rgb(9, 95, 234);
+            color: white;
+            margin-top: 100px;
+        }
+        
+        footer a {
+            color: #fff;
+            font-size: 14px;
+            transition-duration: 0.2s;
+        }
+        
+        footer a:hover {
+            color: #FA944B;
+            text-decoration: none;
+        }
+        
+        .copy {
+            font-size: 12px;
+            padding: 10px;
+            border-top: 1px solid #FFFFFF;
+        }
+        
+        .footer-middle {
+            padding-top: 2em;
+            color: white;
+        }
+        
+        ul.social-network {
+            list-style: none;
+            display: inline;
+            margin-left: 0 !important;
+            padding: 0;
+        }
+        
+        ul.social-network li {
+            display: inline;
+            margin: 0 5px;
+        }
+        
+        .social-network a.icoFacebook:hover {
+            background-color: #3B5998;
+        }
+        
+        .social-network a.icoLinkedin:hover {
+            background-color: #007bb7;
+        }
+        
+        .social-network a.icoFacebook:hover i {
+            color: #fff;
+        }
+        
+        .social-network a.icoLinkedin:hover i {
+            color: #fff;
+        }
+        
+        .social-network a.socialIcon:hover {
+            color: #44BCDD;
+        }
+        
+        .socialHoverClass {
+            color: #44BCDD;
+        }
+        
+        .social-circle li a {
+            display: inline-block;
+            position: relative;
+            margin: 0 auto 0 auto;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            font-size: 15px;
+        }
+        
+        .social-circle li i {
+            margin: 0;
+            line-height: 30px;
+            text-align: center;
+        }
+        
+        .social-circle li a:hover i {
+            -moz-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -ms--transform: rotate(360deg);
+            transform: rotate(360deg);
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -o-transition: all 0.2s;
+            -ms-transition: all 0.2s;
+            transition: all 0.2s;
+        }
+        
+        .triggeredHover {
+            -moz-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -ms--transform: rotate(360deg);
+            transform: rotate(360deg);
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -o-transition: all 0.2s;
+            -ms-transition: all 0.2s;
+            transition: all 0.2s;
+        }
+        
+        .social-circle i {
+            color: #595959;
+            -webkit-transition: all 0.8s;
+            -moz-transition: all 0.8s;
+            -o-transition: all 0.8s;
+            -ms-transition: all 0.8s;
+            transition: all 0.8s;
+        }
+        
+        .social-network a {
+            background-color: #F9F9F9;
+        }
+        
+        .social-network a:hover {
+            background: #ff304d;
+        }
+        
+        .megamenu {
+            position: static;
+        }
+        
+        .megamenu .dropdown-menu {
+            background: none;
+            border: none;
+            width: 100%;
+        }
+        
+        code {
+            color: #745eb1;
+            background: #fff;
+            padding: 0.1rem 0.2rem;
+            border-radius: 0.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <header>
+        <div>
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <div class="justify-content-lg-start">
+                    <a class="navbar-brand col-lg-9 col-md-6 col-12 " href="file:///C:/Users/ADMIN/Desktop/WRBFE40/the%20last/start%20page/big/index.html">
+                        <img src="IMG_MAIN/logo.jpg" alt="logo" style="width:40px">
+                    </a>
+                </div> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                    <ul class="navbar-nav justify-content-around">
+                        <li class="nav-item">
+                            <a class="nav-link" style="margin-right: 100px;">
+                                <form class="form-inline" action="/action_page.php">
+                                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                                    <button class="btn btn-success" type="submit">Search</button>
+                                </form>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <p style="color:white ; margin-top: 10px;"> contact to Us <a href=""><i class="fa-brands fa-instagram"></i></a></p>
+
+                        </li>
+
+                    </ul>
+
+
+                </div>
+
+            </nav>
+            <div>
+                <div>
+                    <div id="demo" class="carousel slide" data-ride="carousel">
+
+                        <!-- Indicators -->
+                        <ul class="carousel-indicators">
+                            <li data-target="#demo" data-slide-to="0" class="active"></li>
+                            <li data-target="#demo" data-slide-to="1"></li>
+                            <li data-target="#demo" data-slide-to="2"></li>
+                        </ul>
+
+                        <!-- The slideshow -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="IMG_MAIN/New folder/PUBG-Banner-804x452.png" alt="Los Angeles" width="100%" height="500">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="IMG_MAIN/New folder/PUBG-Banner-804x452.png" alt="Chicago" width="100%" height="500">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="IMG_MAIN/New folder/PUBG-Banner-804x452.png" alt="New York" width="100%" height="500">
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+    </header>
+    <main>
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-sm-12 col-8">
+                    <div id="section1">
+                        <div class="container">
+                            <div style="color: blue ; text-align: center; font-size: 40px;"> introduce</div>
+                            <p style="text-align: center;">Súng trường bắn tỉa (Sniper Rifle – SR): Có sát thương đơn mục tiêu rất lớn, có khả năng hạ gục kẻ địch với 1 phát vào đầu (khi đối phương trang bị mũ cấp 2) là những lí do giúp SR chiếm được 1 slot chính trong balo của game
+                                thủ. Nhược điểm là lượng đạn khá hạn chế, thời gian lên đạn lâu và thay đạn khá lâu. Các dòng SR xuất hiện trên bản đồ với tỉ lệ khá thấp, ngoại trừ AWM và Lynx AMR là hai vũ khí nằm trong airdrop và Winchester 1894 là
+                                vũ khí độc quyền nằm trong map Miramar.
+
+                        </div>
+
+
+                    </div>
+                    <div id="section1">
+                        <div>
+                            <p style="font-size: 20px;" style="border: 1px solid black ; padding-right: 5px;padding-left: 5px;">table of content</p>
+                            <ul>
+                                <li> Sniper Rifles Damage Chart</li>
+                                <li>Sniper Rifles Information</li>
+                                <li>Best Sniper Rifles in PUBG: New State</li>
+                                <li>Conclusion</li>
+                            </ul>
+
+                            <p style="color: red;font-size: 30;">Sniper Rifles Information
+                            </p>
+                            <p style="font-size: 20px;"> Sniper Rifles Features</p>
+                            <p><a href="" style="color: red;">High Headshot damage:</a>
+                                <a href="">Sniper Rifle deal very high damage to the head, especially when the enemy have low helmet health.</a></p>
+                            <p><a href="" style="color: red;">Single Shot:</a>
+                                <a href=""> Sniper shoot one bullet per trigger pull, this require precise aim and knowledge of bullet drop to hit the enemy</a></p>
+                            <p><a href="" style="color: red;">Mid to Long range:</a>
+                                <a href=""> The best range to use Sniper rifle are from Mid (200m) to Long (300m+).</a></p>
+                            \
+                            <p><a href="" style="color: red;">Air Drop Exclusive:</a>
+                                <a href=""> AWM only be found in Air Drop since they have higher power than other SRs.</a></p>
+                            <p>
+                                Sniper Rifles Guides
+
+                            </p>
+                            <p><a href="" style="color: red;">Aim for Head:</a>
+                                <a href=""> When using Sniper, it is highly recommend to look for a headshot as much as you can since you can eliminate an enemy with 1 bullet.</a></p>
+                            <p><a href="" style="color: red;">Be aware of your position:</a>
+                                <a href="">Snipers are loud once you fire your shot, everybody heard it so make sure you are aware of your surrounding after your shot..</a></p>
+                            <p><a href="" style="color: red;">Lead your aim:</a>
+                                <a href="">When shooting at moving enemy, lead your aim in front of the enemy depend on each sniper bullet travel speed.</a></p>
+                            <p><a href="" style="color: red;">Attachment Priority:</a>
+                                <a href=""> To use Snipers effectively you need to find 4x scope or 6x or 8x to enlarge your visual when scoping it.</a></p>
+
+                        </div>
+
+                    </div>
+                    <div>
+
+
+
+                        <div class="solution-wrap" style="margin-top:50px ;">
+                            <div class="container-fluid">
+
+
+                                <div class="row " style="display: flex; flex-wrap: wrap; ">
+
+                                    <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                        <div class="card">
+                                            <img src="awm.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                            <div class="card-body" style="justify-content: center;">
+                                                <h4 class="card-title" style="text-align: center;">AWM</h4>
+                                                <p class="card-text" style="text-align: center;"> .300 Magnum </p>
+                                                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo1" style="margin-left: auto; margin-right: auto;width: 100%;">more info</button>
+                                                <div id="demo1" class="collapse">
+                                                    <table>
+                                                        <tr style="width:100%">
+                                                            <td> DMG</td>
+                                                            <td></td>
+                                                            <td>105</td>
+
+
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td> range</td>
+                                                            <td style="width:73%"></td>
+                                                            <td> 100</td>
+
+
+                                                        </tr>
+
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                        <div class="card">
+                                            <img src="dsr-1.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                            <div class="card-body">
+                                                <h4 class="card-title">DSR-1</h4>
+                                                <p class="card-text"> 5.56mm </p>
+                                                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo2" style="margin-left: auto; margin-right: auto;width: 100%;">more info</button>
+                                                <div id="demo2" class="collapse">
+                                                    <table>
+                                                        <tr style="width:100%">
+                                                            <td> DMG</td>
+                                                            <td></td>
+                                                            <td>95</td>
+
+
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td> range</td>
+                                                            <td style="width:73%"></td>
+                                                            <td> 100</td>
+
+
+                                                        </tr>
+
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                        <div class="card">
+                                            <img src="m24.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                            <div class="card-body">
+                                                <h4 class="card-title">M24</h4>
+                                                <p class="card-text">7.62mm </p>
+                                                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo3" style="margin-left: auto; margin-right: auto;width: 100%;">more info</button>
+                                                <div id="demo3" class="collapse">
+                                                    <table>
+                                                        <tr style="width:100%">
+                                                            <td> DMG</td>
+                                                            <td></td>
+                                                            <td>79</td>
+
+
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td> range</td>
+                                                            <td style="width:73%"></td>
+                                                            <td> 100</td>
+
+
+                                                        </tr>
+
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                        <div class="card">
+                                            <img src="kar98k.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                            <div class="card-body">
+                                                <h4 class="card-title">kar98K</h4>
+                                                <p class="card-text">7.62mm </p>
+                                                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo4" style="margin-left: auto; margin-right: auto;width: 100%;">more info</button>
+                                                <div id="demo4" class="collapse">
+                                                    <table>
+                                                        <tr style="width:100%">
+                                                            <td> DMG</td>
+                                                            <td></td>
+                                                            <td>75</td>
+
+
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>range</td>
+                                                            <td style="width:73%"></td>
+                                                            <td> 100</td>
+
+
+                                                        </tr>
+
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="mainfooter" role="contentinfo">
+        <div class="footer-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer-pad">
+                            <h4> Footer Heading 1</h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#"> </a>
+                                </li>
+                                <li> <a href="#">Payment Center</a></li>
+                                <li> <a href="#"> Contact Directory </a></li>
+                                <li> <a href="#">Forms</a></li>
+                                <li> <a href="#">News and Updates</a></li>
+                                <li> <a href="#">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer-pad">
+                            <h4> Footer Heading 2</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="#"> Blog </a> </li>
+                                <li><a href="#">Accessibility</a> </li>
+                                <li><a href="#">Disclaimer</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Webmaster</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer-pad">
+                            <h4> Footer Heading 3 </h4>
+                            <ul class="list-unstyled">
+                                <li> <a href="#"> Parks and Recreation </a> </li>
+                                <li> <a href="#"> Public Works </a> </li>
+                                <li> <a href="#">Police Department</a> </li>
+                                <li> <a href="#"> Fire </a> </li>
+                                <li> <a href="#"> Mayor and City Council </a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h4> Follow Us </h4>
+                        <ul class="social-network social-circle">
+                            <li>
+                                <a href="#" class="icoFacebook" title="Facebook"> <i class="fa fa-facebook"> </i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="icoLinkedin" title="Linkedin"> <i class="fa fa-linkedin"> </i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa fa-youtube" aria-hidden="true"> </i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 copy">
+                        <p class="text-center"> © Copyright 2021 - Company Name. All rights reserved. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        //hover tooltip
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

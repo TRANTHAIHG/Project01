@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <style>
+        .minispace {
+            padding-left: 115px;
+        }
+        
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        
+        #myBtn:hover {
+            background-color: #555;
+        }
+        
+        h2 {
+            padding: 25px 0;
+            text-align: center;
+            color: #fff;
+            background: #7c8490;
+        }
+        
+        footer {
+            background: rgb(9, 95, 234);
+            color: white;
+            margin-top: 100px;
+        }
+        
+        footer a {
+            color: #fff;
+            font-size: 14px;
+            transition-duration: 0.2s;
+        }
+        
+        footer a:hover {
+            color: #FA944B;
+            text-decoration: none;
+        }
+        
+        .copy {
+            font-size: 12px;
+            padding: 10px;
+            border-top: 1px solid #FFFFFF;
+        }
+        
+        .footer-middle {
+            padding-top: 2em;
+            color: white;
+        }
+        
+        ul.social-network {
+            list-style: none;
+            display: inline;
+            margin-left: 0 !important;
+            padding: 0;
+        }
+        
+        ul.social-network li {
+            display: inline;
+            margin: 0 5px;
+        }
+        
+        .social-network a.icoFacebook:hover {
+            background-color: #3B5998;
+        }
+        
+        .social-network a.icoLinkedin:hover {
+            background-color: #007bb7;
+        }
+        
+        .social-network a.icoFacebook:hover i {
+            color: #fff;
+        }
+        
+        .social-network a.icoLinkedin:hover i {
+            color: #fff;
+        }
+        
+        .social-network a.socialIcon:hover {
+            color: #44BCDD;
+        }
+        
+        .socialHoverClass {
+            color: #44BCDD;
+        }
+        
+        .social-circle li a {
+            display: inline-block;
+            position: relative;
+            margin: 0 auto 0 auto;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            font-size: 15px;
+        }
+        
+        .social-circle li i {
+            margin: 0;
+            line-height: 30px;
+            text-align: center;
+        }
+        
+        .social-circle li a:hover i {
+            -moz-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -ms--transform: rotate(360deg);
+            transform: rotate(360deg);
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -o-transition: all 0.2s;
+            -ms-transition: all 0.2s;
+            transition: all 0.2s;
+        }
+        
+        .triggeredHover {
+            -moz-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -ms--transform: rotate(360deg);
+            transform: rotate(360deg);
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -o-transition: all 0.2s;
+            -ms-transition: all 0.2s;
+            transition: all 0.2s;
+        }
+        
+        .social-circle i {
+            color: #595959;
+            -webkit-transition: all 0.8s;
+            -moz-transition: all 0.8s;
+            -o-transition: all 0.8s;
+            -ms-transition: all 0.8s;
+            transition: all 0.8s;
+        }
+        
+        .social-network a {
+            background-color: #F9F9F9;
+        }
+        
+        .social-network a:hover {
+            background: #ff304d;
+        }
+        
+        .megamenu {
+            position: static;
+        }
+        
+        .megamenu .dropdown-menu {
+            background: none;
+            border: none;
+            width: 100%;
+        }
+        
+        code {
+            color: #745eb1;
+            background: #fff;
+            padding: 0.1rem 0.2rem;
+            border-radius: 0.2rem;
+        }
+    </style>
+</head>
+
+
+
+
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <header>
+        <div>
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <div class="justify-content-lg-start">
+                    <a class="navbar-brand col-lg-9 col-md-6 col-12 " href="file:///C:/Users/ADMIN/Desktop/WRBFE40/the%20last/start%20page/big/index2.html">
+                        <img src="IMG_MAIN/logo.jpg" alt="logo" style="width:40px; ">
+                    </a>
+                </div> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                    <ul class="navbar-nav justify-content-around">
+                        <li class="nav-item">
+                            <a class="nav-link" style="margin-right: 100px;">
+                                <form class="form-inline" action="/action_page.php">
+                                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                                    <button class="btn btn-success" type="submit">Search</button>
+                                </form>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <p style="color:white ; margin-top: 10px;"> contact to Us <a href=""><i class="fa-brands fa-instagram"></i></a></p>
+
+                        </li>
+
+                    </ul>
+
+
+                </div>
+
+            </nav>
+            <div>
+                <div id="demo" class="carousel slide" data-ride="carousel">
+
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="IMG_MAIN/New folder/PUBG-Banner-804x452.png" alt="Los Angeles" width="100%" height="500">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="IMG_MAIN/New folder/PUBG-Banner-804x452.png" alt="Chicago" width="100%" height="500">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="IMG_MAIN/New folder/PUBG-Banner-804x452.png" alt="New York" width="100%" height="500">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-white  shadow-sm justify-content-end">
+
+            <a href="#" class="navbar-brand font-weight-bold d-block d-lg-none">MegaMenu</a>
+            <button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class=" justify-content-start">
+
+            </div>
+            <div id="navbarContent" class="collapse navbar-collapse justify-content-end">
+
+                <ul class="nav nav-tabs justify-content-end" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#home">GUN_LIST</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#menu3"> INTRODUCE & HOW TO PLAY</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </nav>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div id="home" class="container tab-pane active">
+
+
+
+
+
+
+
+
+
+
+                <div class="solution-wrap">
+                    <div class="container">
+                        <div style="text-align:center ;">
+                            Súng trường tấn công (Assault Rifle – AR):
+                        </div>
+
+                        <div class="row " style="display: flex; flex-wrap: wrap; ">
+
+                            <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                <div class="card">
+                                    <img src="IMG_MAIN/AKM.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                    <div class="card-body">
+                                        <h4 class="card-title" style="text-align: center;">AKM</h4>
+                                        <p class="card-text" style="text-align: center;"> 7.62mm </p>
+                                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo1" style="margin-left: auto; margin-right: auto;width: 100%;">more
+                                            info</button>
+                                        <div id="demo1" class="collapse">
+                                            <table>
+                                                <tr style="width:100%">
+                                                    <td> DMG</td>
+                                                    <td></td>
+                                                    <td>47</td>
+
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> SPD</td>
+                                                    <td style="width:73%"></td>
+                                                    <td> 715 Km/h</td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> zRNG</td>
+                                                    <td></td>
+                                                    <td> 100-1000</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                <div class="card">
+                                    <img src="IMG_MAIN/M416.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                    <div class="card-body">
+                                        <h4 class="card-title" style="text-align: center;">AKM</h4>
+                                        <p class="card-text" style="text-align: center;"> 7.62mm </p>
+                                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo2" style="margin-left: auto; margin-right: auto;width: 100%;">more
+                                            info</button>
+                                        <div id="demo2" class="collapse">
+                                            <table>
+                                                <tr style="width:100%">
+                                                    <td> DMG</td>
+                                                    <td></td>
+                                                    <td>47</td>
+
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> SPD</td>
+                                                    <td style="width:73%"></td>
+                                                    <td> 715 Km/h</td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> zRNG</td>
+                                                    <td></td>
+                                                    <td> 100-1000</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                <div class="card">
+                                    <img src="IMG_MAIN/scar-l.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                    <div class="card-body">
+                                        <h4 class="card-title" style="text-align: center;">AKM</h4>
+                                        <p class="card-text" style="text-align: center;"> 7.62mm </p>
+                                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo3" style="margin-left: auto; margin-right: auto;width: 100%;">more
+                                            info</button>
+                                        <div id="demo3" class="collapse">
+                                            <table>
+                                                <tr style="width:100%">
+                                                    <td> DMG</td>
+                                                    <td></td>
+                                                    <td>47</td>
+
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> SPD</td>
+                                                    <td style="width:73%"></td>
+                                                    <td> 715 Km/h</td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> zRNG</td>
+                                                    <td></td>
+                                                    <td> 100-1000</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                <div class="card">
+                                    <img src="IMG_MAIN/beryl-m762.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                    <div class="card-body">
+                                        <h4 class="card-title" style="text-align: center;">AKM</h4>
+                                        <p class="card-text" style="text-align: center;"> 7.62mm </p>
+                                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo4" style="margin-left: auto; margin-right: auto;width: 100%;">more
+                                            info</button>
+                                        <div id="demo4" class="collapse">
+                                            <table>
+                                                <tr style="width:100%">
+                                                    <td> DMG</td>
+                                                    <td></td>
+                                                    <td>47</td>
+
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> SPD</td>
+                                                    <td style="width:73%"></td>
+                                                    <td> 715 Km/h</td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> zRNG</td>
+                                                    <td></td>
+                                                    <td> 100-1000</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                        <p style="text-align:center ;"><a href="infopage1/index3.html" data-toggle="tooltip" title="click to see more AR gun info">more info</a></p>
+
+
+                    </div>
+
+                </div>
+                <div class="solution-wrap">
+                    <div class="container">
+                        <div style="text-align:center ;">
+                            Súng bắn đạn ghém (Shotgun):
+
+                        </div>
+
+                        <div class="row" style="display: flex; flex-wrap: wrap;">
+
+                            <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                <div class="card">
+                                    <img src="IMG_MAIN/AKM.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                    <div class="card-body">
+                                        <h4 class="card-title" style="text-align: center;">AKM</h4>
+                                        <p class="card-text" style="text-align: center;"> 7.62mm </p>
+                                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo5" style="margin-left: auto; margin-right: auto;width: 100%;">more
+                                            info</button>
+                                        <div id="demo5" class="collapse">
+                                            <table>
+                                                <tr style="width:100%">
+                                                    <td> DMG</td>
+                                                    <td></td>
+                                                    <td>47</td>
+
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> SPD</td>
+                                                    <td style="width:73%"></td>
+                                                    <td> 715 Km/h</td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> zRNG</td>
+                                                    <td></td>
+                                                    <td> 100-1000</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                <div class="card">
+                                    <img src="IMG_MAIN/AKM.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                    <div class="card-body">
+                                        <h4 class="card-title" style="text-align: center;">AKM</h4>
+                                        <p class="card-text" style="text-align: center;"> 7.62mm </p>
+                                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo6" style="margin-left: auto; margin-right: auto;width: 100%;">more
+                                            info</button>
+                                        <div id="demo6" class="collapse">
+                                            <table>
+                                                <tr style="width:100%">
+                                                    <td> DMG</td>
+                                                    <td></td>
+                                                    <td>47</td>
+
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> SPD</td>
+                                                    <td style="width:73%"></td>
+                                                    <td> 715 Km/h</td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> zRNG</td>
+                                                    <td></td>
+                                                    <td> 100-1000</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                <div class="card">
+                                    <img src="IMG_MAIN/AKM.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                    <div class="card-body">
+                                        <h4 class="card-title" style="text-align: center;">AKM</h4>
+                                        <p class="card-text" style="text-align: center;"> 7.62mm </p>
+                                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo7" style="margin-left: auto; margin-right: auto;width: 100%;">more
+                                            info</button>
+                                        <div id="demo7" class="collapse">
+                                            <table>
+                                                <tr style="width:100%">
+                                                    <td> DMG</td>
+                                                    <td></td>
+                                                    <td>47</td>
+
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> SPD</td>
+                                                    <td style="width:73%"></td>
+                                                    <td> 715 Km/h</td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> zRNG</td>
+                                                    <td></td>
+                                                    <td> 100-1000</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                <div class="card">
+                                    <img src="IMG_MAIN/AKM.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                    <div class="card-body">
+                                        <h4 class="card-title" style="text-align: center;">AKM</h4>
+                                        <p class="card-text" style="text-align: center;"> 7.62mm </p>
+                                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo8" style="margin-left: auto; margin-right: auto;width: 100%;">more
+                                            info</button>
+                                        <div id="demo8" class="collapse">
+                                            <table>
+                                                <tr style="width:100%">
+                                                    <td> DMG</td>
+                                                    <td></td>
+                                                    <td>47</td>
+
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> SPD</td>
+                                                    <td style="width:73%"></td>
+                                                    <td> 715 Km/h</td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> zRNG</td>
+                                                    <td></td>
+                                                    <td> 100-1000</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <p style="text-align:center ;"><a href="infopage2/index3.html">more info</a></p>
+
+                    </div>
+
+                </div>
+                <div class="solution-wrap">
+                    <div class="container">
+                        <div style="text-align:center ;">
+                            Súng trường bắn tỉa (Sniper Rifle – SR):
+                        </div>
+
+                        <div class="row" style="display: flex; flex-wrap: wrap;">
+
+                            <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                <div class="card">
+                                    <img src="IMG_MAIN/AKM.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                    <div class="card-body">
+                                        <h4 class="card-title" style="text-align: center;">AKM</h4>
+                                        <p class="card-text" style="text-align: center;"> 7.62mm </p>
+                                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo9" style="margin-left: auto; margin-right: auto;width: 100%;">more
+                                            info</button>
+                                        <div id="demo9" class="collapse">
+                                            <table>
+                                                <tr style="width:100%">
+                                                    <td> DMG</td>
+                                                    <td></td>
+                                                    <td>47</td>
+
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> SPD</td>
+                                                    <td style="width:73%"></td>
+                                                    <td> 715 Km/h</td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> zRNG</td>
+                                                    <td></td>
+                                                    <td> 100-1000</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                <div class="card">
+                                    <img src="IMG_MAIN/AKM.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                    <div class="card-body">
+                                        <h4 class="card-title" style="text-align: center;">AKM</h4>
+                                        <p class="card-text" style="text-align: center;"> 7.62mm </p>
+                                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo10" style="margin-left: auto; margin-right: auto;width: 100%;">more
+                                            info</button>
+                                        <div id="demo10" class="collapse">
+                                            <table>
+                                                <tr style="width:100%">
+                                                    <td> DMG</td>
+                                                    <td></td>
+                                                    <td>47</td>
+
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> SPD</td>
+                                                    <td style="width:73%"></td>
+                                                    <td> 715 Km/h</td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> zRNG</td>
+                                                    <td></td>
+                                                    <td> 100-1000</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                <div class="card">
+                                    <img src="IMG_MAIN/AKM.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                    <div class="card-body">
+                                        <h4 class="card-title" style="text-align: center;">AKM</h4>
+                                        <p class="card-text" style="text-align: center;"> 7.62mm </p>
+                                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo12" style="margin-left: auto; margin-right: auto;width: 100%;">more
+                                            info</button>
+                                        <div id="demo12" class="collapse">
+                                            <table>
+                                                <tr style="width:100%">
+                                                    <td> DMG</td>
+                                                    <td></td>
+                                                    <td>47</td>
+
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> SPD</td>
+                                                    <td style="width:73%"></td>
+                                                    <td> 715 Km/h</td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> zRNG</td>
+                                                    <td></td>
+                                                    <td> 100-1000</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                <div class="card">
+                                    <img src="IMG_MAIN/AKM.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                    <div class="card-body">
+                                        <h4 class="card-title" style="text-align: center;">AKM</h4>
+                                        <p class="card-text" style="text-align: center;"> 7.62mm </p>
+                                        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo13" style="margin-left: auto; margin-right: auto;width: 100%;">more
+                                            info</button>
+                                        <div id="demo13" class="collapse">
+                                            <table>
+                                                <tr style="width:100%">
+                                                    <td> DMG</td>
+                                                    <td></td>
+                                                    <td>47</td>
+
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> SPD</td>
+                                                    <td style="width:73%"></td>
+                                                    <td> 715 Km/h</td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <td> zRNG</td>
+                                                    <td></td>
+                                                    <td> 100-1000</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                        <p style="text-align:center ;"><a href="infopage3/index3.html">more info</a></p>
+                    </div>
+
+                </div>
+
+
+
+                <div class="solution-wrap">
+                    <div class="container">
+                        <div style="text-align:center ;">
+                            HIGHLIGHT
+                        </div>
+
+                        <div class="row" style="display: flex; flex-wrap: wrap;">
+
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="card">
+
+
+
+                                    <p style="text-align:center ;">
+                                        <a href="https://www.youtube.com/watch?v=aXegVCEhxws"><img src="IMG_MAIN/New folder/hightlight1.png" class="align-self-start mr-3" style="width:100%"></a>
+                                    </p>
+
+
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="card">
+
+
+
+                                    <p style="text-align:center ;">
+                                        <a href="https://www.youtube.com/watch?v=aXegVCEhxws"><img src="IMG_MAIN/New folder/hightlight1.png" class="align-self-start mr-3" style="width:100%"></a>
+                                    </p>
+
+
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="card">
+
+
+
+                                    <p style="text-align:center ;">
+                                        <a href="https://www.youtube.com/watch?v=aXegVCEhxws"><img src="IMG_MAIN/New folder/hightlight1.png" class="align-self-start mr-3" style="width:100%"></a>
+                                    </p>
+
+
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="card">
+
+
+
+                                    <p style="text-align:center ;">
+                                        <a href="https://www.youtube.com/watch?v=aXegVCEhxws"><img src="IMG_MAIN/New folder/hightlight1.png" class="align-self-start mr-3" style="width:100%"></a>
+                                    </p>
+
+
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="card">
+
+
+
+                                    <p style="text-align:center ;">
+                                        <a href="https://www.youtube.com/watch?v=aXegVCEhxws"><img src="IMG_MAIN/New folder/hightlight1.png" class="align-self-start mr-3" style="width:100%"></a>
+                                    </p>
+
+
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="card">
+
+
+
+                                    <p style="text-align:center ;">
+                                        <a href="https://www.youtube.com/watch?v=aXegVCEhxws"><img src="IMG_MAIN/New folder/hightlight1.png" class="align-self-start mr-3" style="width:100%"></a>
+                                    </p>
+
+
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="card">
+
+
+
+                                    <p style="text-align:center ;">
+                                        <a href="https://www.youtube.com/watch?v=aXegVCEhxws"><img src="IMG_MAIN/New folder/hightlight1.png" class="align-self-start mr-3" style="width:100%"></a>
+                                    </p>
+
+
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="card">
+
+
+
+                                    <p style="text-align:center ;">
+                                        <a href="https://www.youtube.com/watch?v=aXegVCEhxws"><img src="IMG_MAIN/New folder/hightlight1.png" class="align-self-start mr-3" style="width:100%"></a>
+                                    </p>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+            <div id="menu1" class="container tab-pane fade"><br>
+                <h3>Menu 1</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+
+            <div id="menu3" class="container tab-pane fade"><br>
+                <div style="color: blue ; text-align: center; font-size: 40px;"> introduce</div>
+                <hr>
+                <div class="container" style=" display: flex ; justify-content: space-around; ">
+
+                    <hr>
+                    <div class="col-lg-6 col-md-6 col-12 ">
+                        <p>
+                            PUBG: Battlegrounds (trước đây là PlayerUnknown's Battlegrounds, hay viết tắt là PUBG) là một trò chơi điện tử hành động, sinh tồn, nhiều người chơi trực tuyến do Krafton Inc. (được thành lập dựa trên sự hợp nhất của công ty mẹ Bluehole Studio và công
+                            ty con PUBG Corporation[1]) - tập đoàn phát triển game có trụ sở chính được đặt tại thành phố Seongnam, Hàn Quốc thiết kế, phát triển và phát hành. Trò chơi này ban đầu dựa trên các bản Mod; trước đó đã được Brendan "PlayerUnknown
+                            " Greene - nhà thiết kế trò chơi điện tử người Ireland - sáng tạo, áp dụng cho nhiều trò chơi nhỏ khác nhau với cảm hứng bắt nguồn từ một bộ phim của Nhật Bản; ra mắt vào năm 2000 mang tên Battle Royale. Sau khi Greene gặp
+                            gỡ và quyết định hợp tác cùng với Bluehole, dự án PUBG tiếp tục được mở rộng thành một trò chơi độc lập hoàn chỉnh dưới sự chỉ đạo nghệ thuật của chính anh cùng với nhà sản xuất, phát triển trò chơi người Hàn Quốc Kim Chang-han[2]
+                            - CEO đương nhiệm của Krafton. Trong trò chơi, sẽ có tối đa 100 người chơi (bao gồm cả Bot Players - những người chơi ảo được điều khiển tự động bởi trí tuệ nhân tạo) sẽ nhảy dù xuống một hòn đảo lớn. Người chơi sau đó phải
+                            nhanh chóng nhặt đồ dùng, vũ khí, phương tiện di chuyển và các trang thiết bị cần thiết để có thể sinh tồn, kết hợp với việc tiêu diệt những người chơi khác đồng thời tránh bị họ giết. Khu vực an toàn sẵn có của bản đồ sẽ thu
+                            nhỏ dần theo thời gian, đẩy những người chơi còn lại vào những khu vực hẹp hơn để ép buộc họ phải đụng độ với nhau. Người chơi cuối cùng hoặc đội 4 thành viên sống sót cuối cùng sẽ giành được chiến thắng chung cuộc.[3] Phiên
+                            bản truy cập sớm cho hệ điều hành Microsoft Windows trên Steam được phát hành vào tháng 3 năm 2017 và bản đầy đủ được phát hành vào 20 tháng 12 năm 2017. Cũng trong tháng 12, trò chơi đã được Microsoft Studios phát hành cho
+                            Xbox One qua chương trình Xbox Game Preview. Đến đầu năm 2018, phiên bản Steam đã bán được hơn ba mươi triệu bản và có số người chơi đồng thời cao nhất trên ba triệu, khiến cho PUBG trở thành trò chơi được chơi nhiều nhất trên
+                            Steam, trong khi phiên bản Xbox One đã bán được hơn bốn triệu bản. Trò chơi cũng được bản địa hóa và được Tencent Games phát hành ở Trung Quốc, bao gồm hai phiên bản cho thiết bị di động khác nhau dành riêng cho quốc gia này
+                            là PUBG Mobile Timi và PUBG Mobile Lightspeed and Quantum. Sau đó, vào tháng 3 năm 2018, Tencent Games và PUBG Corp đã kết hợp để cho ra mắt chính thức PUBG Mobile Lightspeed and Quantum phiên bản quốc tế (gọi tắt là PUBG Mobile)
+                            với năm loại máy chủ là Bắc Mỹ, Nam Mỹ, Châu Âu, Châu Á và KR/JP (Hàn Quốc và Nhật Bản). Tiếp đó, ngày 26 tháng 11 năm 2018, PUBG Mobile phiên bản Việt Nam chính thức phát hành trên các dòng máy thuộc hệ điều hành iOS bởi VNG
+                            dưới sự hợp tác của VNG, Tencent Games và PUBG Corporation (Bluehole), và đến ngày 27 thì ra bản cho Android. Tuy dành riêng cho thị trường Việt Nam nhưng bản này vẫn kết nối với máy chủ quốc tế. PUBG nhận được nhiều nhận xét
+                            tích cực từ các nhà phê bình trong cả giai đoạn Early Access và cả phiên bản phát hành cuối cùng; những người đánh giá thấy rằng mặc dù trò chơi vẫn chưa hoàn thành và có một số sai sót về mặt kỹ thuật, nhưng PUBG đã đưa ra
+                            những kiểu chơi trò chơi mới mà người chơi ở mọi trình độ có thể dễ dàng tiếp cận và có thể muốn chơi lại. Trò chơi nhận được một số đề cử cho hạng mục "Game của năm " và các giải thưởng lớn nhỏ khác trong năm 2017, và được
+                            xem là trò chơi định hình của thể loại chiến đấu sinh tồn. Một số trò chơi video khác, sau thành công của PUBG, đã thêm vào các chế độ Battle Royale, trong khi một số bản sao, chủ yếu ở Trung Quốc, cũng xuất hiện. Tổng công
+                            ty PUBG đã tổ chức một số giải đấu nhỏ và giới thiệu các công cụ trong trò chơi để giúp phát sóng trực tiếp trò chơi cho khán giả xem, vì họ muốn trò chơi này trở thành một môn thể thao điện tử phổ biến, tuy nhiên, trò chơi
+                            cũng đã bị cấm ở một số quốc gia vì bị cho là có hại, bạo lực và gây nghiện cho người chơi trẻ tuổi.
+
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12 ">
+                        <div class="container ">
+
+                            <div class="card " style="width:500px ">
+                                <img class="card-img-top " src="IMG_MAIN/Pubgps4.jpg" alt="Card image " style="width:100% ">
+                                <div class="card-body ">
+                                    <p style="text-align:center ;"> ảnh bìa của PUBG cho nền tảng ps4</p>
+                                    <table>
+                                        <tr>
+                                            <td> nhà phát triển</td>
+                                            <td class="minispace">KRAFTON Corporation</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td> Nhà phát hành</td>
+                                            <td class="minispace"> KRAFTON Corporation</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td> Đạo diễn </td>
+                                            <td class="minispace"> Brendan Greene , Jang Tae-seok</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td> Nhà sản xuất</td>
+                                            <td class="minispace"> Kim Chang-han</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td> Thiết kế</td>
+                                            <td class="minispace"> Brendan Greene Kim Chang-han</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td> Minh họa </td>
+                                            <td class="minispace">Jang Tae-seok </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td> Âm nhạc</td>
+                                            <td class="minispace"> Tom Salta</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td> Công nghệ</td>
+                                            <td class="minispace">Unreal Engine 4</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td> nền tảng</td>
+                                            <td class="minispace">
+                                                Microsoft Windows</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="5"></td>
+                                            <td class="minispace">Android</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="minispace">iOS</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td class="minispace">Xbox One</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td class="minispace">stadia</td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <td class="minispace">Play Stations 4</td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td> Thể loại</td>
+                                            <td class="minispace"> Battle royale </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Chế độ </td>
+                                            <td class="minispace"> Multiplayer</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td> Ngôn ngữ </td>
+                                            <td class="minispace"> Đa ngôn ngữ </td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <p style="color: blue;"> nền tảng xây dựng</p>
+                    <hr> Nhóm phát triển chọn ba nền tảng quan trọng cho PUBG: Unreal 4, Amazon Web Services và Steam. Họ sẽ phát triển game trên Unreal 4, các server sử dụng công nghệ của Amazon Web Services, và cuối cùng trò chơi được phân phối trên Steam.
+                    Việc chọn Unreal 4 giúp nhóm phát triển tiết kiệm rất nhiều thời gian và công sức bởi họ không cần phải tạo ra một engine riêng, trong khi thời gian của họ lại có hạn. Vào ngày 13 tháng 3 năm 2019, Brendan Greene đã rời chức vụ giám
+                    đốc điều hành phát triển của PUBG Corporation, nhưng vẫn là giám đốc sáng tạo, vì bản thân anh luôn mong muốn phát triển một cái gì đó mới lạ hơn, sau đó, Greene đã từ Hàn Quốc sang Hà Lan, thành lập một studio hoàn toàn mới mang tên
+                    PlayerUnknown Productions nhằm tiếp tục phục vụ mục đích phát triển cho các dự án game mới của riêng mình. Chức vụ giám đốc điều hành phát triển bây giờ được nhường lại cho Tae-seok Jang, người trước đó từng đảm nhận chỉ đạo mảng đồ
+                    họa.
+                </div>
+                <div style="color: blue ; text-align: center; font-size: 40px;"> how to play </div>
+                <hr>
+                <div class="container">
+                    <p> <b>The rules</b></p>
+                    <hr>
+                    <p>
+                        PUBG: Battlegrounds là một trò chơi hành động trong đó tối đa 100 người chơi chiến đấu trong một trận chiến sinh tồn, một loại trò chơi sinh tồn có quy mô lớn, nơi mà người chơi phải sinh tồn trước 99 người còn lại để trở thành người sống sót cuối cùng.
+                        Người chơi có thể chọn để chơi solo, hoặc tham gia một nhóm nhỏ tối đa bốn người. Trong cả hai trường hợp, người cuối cùng hoặc đội cuối cùng còn lại sẽ thắng trận đấu. Mỗi trận đấu bắt đầu với hàng loạt người chơi nhảy dù từ máy
+                        bay xuống khu vực bản đồ có diện tích khoảng 8x8 km. Đường bay của máy bay trên bản đồ thay đổi theo từng vòng đấu, yêu cầu người chơi nhanh chóng xác định thời điểm tốt nhất để nhảy dù xuống mặt đất. Người chơi bắt đầu trò chơi
+                        mà không có thiết bị nào ngoại trừ việc lựa chọn quần áo, vốn không ảnh hưởng đến lối chơi. Một khi tiếp đất, người chơi có thể tìm kiếm các tòa nhà và các địa điểm khác để tìm kiếm vũ khí, xe cộ, áo giáp, quần áo và các thiết
+                        bị khác. Các vật phẩm này được phân bố theo chương trình trên bản đồ ở đầu trận đấu, với các khu vực có nguy cơ cao nhất thường có thiết bị tốt hơn. Giết một người chơi cho phép người bắn lấy toàn bộ vật phẩm trên người chơi bị
+                        giết. Người chơi có thể lựa chọn chơi theo góc nhìn thứ nhất hoặc thứ ba, mỗi góc nhìn đều có lợi thế và bất lợi riêng trong chiến đấu và nhận thức tình huống; mặc dù các cài đặt máy chủ cụ thể có thể được áp dụng để buộc tất cả
+                        người chơi sử dụng chung một góc nhìn để loại bỏ một số lợi thế. Cứ vài phút một lần, khu vực có thể chơi được của bản đồ bắt đầu bị thu hẹp về một vị trí ngẫu nhiên, với bất kỳ người chơi nào đang ở ngoài khu vực an toàn sẽ bị
+                        mất máu tăng dần và cuối cùng sẽ bị loại khỏi trò chơi nếu người chơi không kịp chạy tới khu vực an toàn kịp thời gian quy định; trong trò chơi, người chơi nhìn thấy ranh giới như một bức tường màu xanh lấp lánh nhỏ dần theo thời
+                        gian. Điều này khiến khu vực chơi nhỏ dần và ép buộc người chơi phải đụng độ với nhau. Trong quá trình của trận đấu, các vùng ngẫu nhiên của bản đồ được đánh dấu màu đỏ (gọi là "red zone") và bị đánh bom, gây ra mối đe dọa cho
+                        người chơi ở trong khu vực đó. Trong cả hai trường hợp, người chơi được cảnh báo vài phút trước khi những sự kiện này xảy ra, cho họ có thời gian di chuyển đến nơi an toàn]. Một cách ngẫu nhiên, một chiếc máy bay sẽ bay qua nhiều
+                        phần khác nhau của bản đồ còn có thể chơi được và thả một gói đồ phần thưởng (gọi là "hòm thính"),chứa đựng những đồ vật thông thường không thể có được trong quá trình chơi game bình thường. Những gói đồ này phát ra khói đỏ rất
+                        rõ ràng, thu hút người chơi quan tâm ở gần nó và tạo ra thêm nhiều cuộc đụng độ Trung bình, một lượt chơi chỉ kéo dài không quá 30 phút. Khi hoàn thành mỗi vòng đấu, người chơi sẽ kiếm được tiền trong trò chơi dựa trên thời gian
+                        họ sống sót bao lâu, có bao nhiêu người chơi khác đã bị họ giết, và họ đã tạo ra bao nhiêu sát thương cho những người chơi khác. Tiền tệ được sử dụng để mua các thùng chứa bao gồm các đồ để tuỳ biến nhân vật.
+                    </p>
+                    <br>
+                    <p> <b>vũ khí</b></p>
+
+
+
+                    <hr>
+                    <p><i>Hiện tại, PUBG có 7 chủng loại vũ khí với hơn 40 loại vũ khí khác nhau: Súng lục (Pistol),
+                            Súng tiểu liên
+                            (Sub-machine gun – SMG), Súng bắn đạn ghém (Shotgun), Súng trường tấn công (Assault Rifle –
+                            AR), Súng
+                            trường thiện xạ (Designated marksman rifle – DMR), Súng máy hạng nhẹ (Light Machine Gun -
+                            LMG) và Súng
+                            trường bắn tỉa (Sniper Rifle – SR). </i> </p>
+
+                    <br>
+                    <p><b>phương tiện di chuyển</b></p>
+                    <ul>
+                        <li>Xe Buggy</li>
+                        <li>Xe UAZ </li>
+                        <li>Xe Dacia 1300</li>
+                        <li> Xe Moto</li>
+                        <li>Xe bán tải Pick-up</li>
+                        <li> Xe trượt tuyết</li>
+                        <li> Mô tô nước "Aquarail" </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mainfooter" role="contentinfo">
+            <div class="footer-middle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="footer-pad">
+                                <h4> Footer Heading 1</h4>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#"> </a>
+                                    </li>
+                                    <li> <a href="#">Payment Center</a></li>
+                                    <li> <a href="#"> Contact Directory </a></li>
+                                    <li> <a href="#">Forms</a></li>
+                                    <li> <a href="#">News and Updates</a></li>
+                                    <li> <a href="#">FAQs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="footer-pad">
+                                <h4> Footer Heading 2</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#"> Blog </a> </li>
+                                    <li><a href="#">Accessibility</a> </li>
+                                    <li><a href="#">Disclaimer</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                    <li><a href="#">Webmaster</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="footer-pad">
+                                <h4> Footer Heading 3 </h4>
+                                <ul class="list-unstyled">
+                                    <li> <a href="#"> Parks and Recreation </a> </li>
+                                    <li> <a href="#"> Public Works </a> </li>
+                                    <li> <a href="#">Police Department</a> </li>
+                                    <li> <a href="#"> Fire </a> </li>
+                                    <li> <a href="#"> Mayor and City Council </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <h4> Follow Us </h4>
+                            <ul class="social-network social-circle">
+                                <li>
+                                    <a href="#" class="icoFacebook" title="Facebook"> <i class="fa fa-facebook"> </i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="icoLinkedin" title="Linkedin"> <i class="fa fa-linkedin"> </i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fa fa-youtube" aria-hidden="true"> </i> </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 copy">
+                            <p class="text-center"> © Copyright 2021 - Company Name. All rights reserved. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <script>
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+            //hover tooltip
+            $(document).ready(function() {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+</body>
+
+</html>

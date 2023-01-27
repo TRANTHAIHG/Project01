@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../Unit14/JS/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        #container {
+            width: 100%;
+            height: 500px;
+            background-color: rgb(166, 231, 188);
+        }
+        
+        h1 {
+            color: red;
+            text-align: center;
+        }
+        
+        #img1 {
+            width: 250px;
+            height: 250px;
+            float: left;
+            margin-left: 20px;
+            position: relative;
+        }
+        
+        #img2 {
+            width: 250px;
+            height: 250px;
+            float: left;
+            margin-left: 20px;
+            position: relative;
+        }
+        
+        #img3 {
+            width: 250px;
+            height: 250px;
+            float: left;
+            margin-left: 20px;
+            position: relative;
+        }
+        
+        #img4 {
+            width: 250px;
+            height: 250px;
+            float: left;
+            margin-left: 20px;
+            position: relative;
+        }
+        
+        img {
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+            z-index: 1;
+        }
+        
+        #img-11 {
+            width: 100%;
+            background-color: blue;
+        }
+        
+        #X {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Album ảnh </h1>
+        <div id="img1" class="img1">
+            <img id="anh-1" src="image3/Bản sao của anh_3.webp" alt="">
+            <i id="i1">Ảnh Đẹp</i>
+        </div>
+        <div id="img2" class="img1">
+            <img id="anh-3" src="image3/Bản sao của anh_1.webp" alt="">
+            <i id="i2">Ảnh Đẹp</i>
+        </div>
+        <div id="img3" class="img1">
+            <img id="anh-3" src="image3/Bản sao của anh_4.webp" alt="">
+            <i id="i3">Ảnh Đẹp</i>
+        </div>
+        <div id="img4" class="img1">
+            <img id="anh-3" src="image3/Bản sao của anh_2.webp" alt="">
+            <i id="i4">Ảnh Đẹp</i>
+        </div>
+        <div id="X">
+            X
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#i1').hide();
+            $('#X').hide();
+            $('#img1').on('click', function() {
+                $('.img1').css('z-index', 1)
+                $('#img1').css('z-index', 2)
+                $('#anh-1').animate({
+                    'left': "100px",
+                    'width': "500px",
+                    'height': "500px"
+                }, 3000)
+                $('#i1').show();
+                $('#X').show();
+            })
+            $('#i2').hide();
+            $('#X').hide();
+            $('#img2').on('click', function() {
+                $('.img1').css('z-index', 1)
+                $('#img2').css('z-index', 2)
+                $('#anh-2').animate({
+                    'left': "100px",
+                    'width': "500px",
+                    'height': "500px"
+                }, 3000)
+                $('#i2').show();
+                $('#X').show();
+            })
+            $('#i3').hide();
+            $('#X').hide();
+            $('#img3').on('click', function() {
+                $('.img1').css('z-index', 1)
+                $('#img3').css('z-index', 2)
+                $('#anh-3').animate({
+                    'left': "100px",
+                    'width': "500px",
+                    'height': "500px"
+                }, 3000)
+                $('#i3').show();
+                $('#X').show();
+            })
+            $('#i4').hide();
+            $('#X').hide();
+            $('#img4').on('click', function() {
+                $('.img1').css('z-index', 1)
+                $('#img4').css('z-index', 2)
+                $('#anh-4').animate({
+                    'left': "100px",
+                    'width': "500px",
+                    'height': "500px"
+                }, 3000)
+                $('#i4').show();
+                $('#X').show();
+            })
+
+            $('#X').on('click', function() {
+
+                $('.img1').children('img').animate({
+                    'left': "0px",
+                    'width': "250px",
+                    'height': "250px"
+                }, 3000)
+                $('#i1').hide();
+                $('#X').hide();
+
+            })
+
+
+        })
+    </script>
+</body>
+
+</html>

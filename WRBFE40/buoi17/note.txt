@@ -1,0 +1,2 @@
+thay display flex
+justify-content-space between cho float left

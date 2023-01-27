@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Zent Blog</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+         :root {
+            --color-white: #fff;
+            --color-black: #000;
+            --color-grey: #6c757c;
+            --color-link: #6baafd;
+        }
+        
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: unset;
+            box-sizing: border-box;
+        }
+        
+        ul,
+        ol {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        body {
+            background-color: var(--color-white);
+            font-size: 14px;
+            font-weight: 400;
+            font-family: "Roboto", sans-serif;
+            color: var(--color-black);
+            line-height: 1.2;
+        }
+        
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+            font-weight: 900;
+            color: var(--color-black);
+        }
+        
+        .header a {
+            color: var(--color-black);
+        }
+        
+        .header_logo {
+            font-size: 20px;
+        }
+        
+        .main-menu {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .main-menu li {
+            padding: 15px 10px;
+        }
+        /* end header */
+        
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /* category blog */
+        
+        .box-post-1 {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+        
+        .post-item-1 {
+            position: relative;
+            min-height: 206px;
+            color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .post-item-1:before {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            background-color: rgb(0 0 0 / 38%);
+        }
+        
+        .h-100 {
+            height: 100%;
+        }
+        
+        .post-item-1 .thumbnail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        
+        .post-item-1 .thumbnail img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .post-item-1 .body {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 10px;
+            z-index: 3;
+        }
+        
+        .post-item-1 .body .title {
+            font-size: 17px;
+            line-height: 1.2;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        
+        .post-item-1 .body .time {
+            color: #c7c3c3;
+            font-size: 12px;
+        }
+        
+        .box-post-1 .col .post-item-1:last-child {
+            margin-top: 10px;
+        }
+        
+        .box-post-1 .col .post-item-1:first-child {
+            margin-top: 0;
+        }
+        
+        .blog-post {
+            padding: 50px 0;
+        }
+        
+        .blog-post h2 {
+            margin-bottom: 10px;
+            font-size: 25px;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        
+        .col {
+            width: 33%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+        .badge {
+            text-transform: uppercase;
+            color: var(--color-white);
+            background-color: var(--color-grey);
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 5px;
+            letter-spacing: 2px;
+            font-size: 10px;
+        }
+        
+        .badge-grey {
+            background-color: var(--color-grey);
+        }
+        
+        .badge-green {
+            background-color: #8bc34a;
+        }
+        
+        .badge-blue {
+            background-color: #3089fc;
+        }
+        
+        .badge-red {
+            background-color: #f23a2f;
+        }
+        
+        .blog-post .post-item .post-avata {
+            width: 100%;
+        }
+        
+        .blog-post .post-item .post-avata img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        
+        .blog-post .post-item .post-body {
+            padding: 15px 10px;
+        }
+        
+        .blog-post .post-item .title {
+            color: var(--color-black);
+            font-size: 18px;
+            line-height: 1.5;
+            padding: 10px 0;
+        }
+        
+        .blog-post .post-item .auther {
+            font-size: 12px;
+            color: var(--color-grey);
+            padding-bottom: 10px;
+        }
+        
+        .blog-post .post-item .auther .far {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        
+        .blog-post .post-item .auther span {
+            font-weight: 700;
+            color: var(--color-black);
+        }
+        
+        .blog-post .post-item .description {
+            color: var(--color-grey);
+            padding-bottom: 10px;
+        }
+        
+        .blog-post .post-item .read-more {
+            color: var(--color-link);
+        }
+        
+        .blog-post .row {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .paginate ul {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .paginate-item {
+            background-color: #3089fc;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .paginate-item.active {
+            background-color: transparent;
+        }
+        
+        .paginate-item.active {
+            color: #000;
+        }
+        
+        .paginate-item a {
+            color: #fff;
+        }
+        
+        .footer {
+            background-color: #333333;
+            color: #999999;
+            padding: 50px;
+        }
+        
+        .footer a {
+            color: #999999;
+        }
+        
+        .footer .title {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .footer-sub-link {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .footer-sub-link li {
+            width: 50%;
+            padding: 5px 10px;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .footer-bot {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+         :root {
+            --color-white: #fff;
+            --color-black: #000;
+            --color-grey: #6c757c;
+            --color-link: #6baafd;
+        }
+        
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: unset;
+            box-sizing: border-box;
+        }
+        
+        ul,
+        ol {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        body {
+            background-color: var(--color-white);
+            font-size: 14px;
+            font-weight: 400;
+            font-family: "Roboto", sans-serif;
+            color: var(--color-black);
+            line-height: 1.2;
+        }
+        
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+            font-weight: 900;
+            color: var(--color-black);
+        }
+        
+        .header a {
+            color: var(--color-black);
+        }
+        
+        .header_logo {
+            font-size: 20px;
+        }
+        
+        .main-menu {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .main-menu li {
+            padding: 15px 10px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        /* category blog */
+        
+        .box-post-1 {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+        
+        .post-item-1 {
+            position: relative;
+            min-height: 206px;
+            color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .post-item-1:before {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            background-color: rgb(0 0 0 / 38%);
+        }
+        
+        .h-100 {
+            height: 100%;
+        }
+        
+        .post-item-1 .thumbnail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        
+        .post-item-1 .thumbnail img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .post-item-1 .body {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 10px;
+            z-index: 3;
+        }
+        
+        .post-item-1 .body .title {
+            font-size: 17px;
+            line-height: 1.2;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        
+        .post-item-1 .body .time {
+            color: #c7c3c3;
+            font-size: 12px;
+        }
+        
+        .box-post-1 .col .post-item-1:last-child {
+            margin-top: 10px;
+        }
+        
+        .box-post-1 .col .post-item-1:first-child {
+            margin-top: 0;
+        }
+        /* end category blog */
+        /* blog post */
+        
+        .blog-post {
+            padding: 50px 0;
+        }
+        
+        .blog-post h2 {
+            margin-bottom: 10px;
+            font-size: 25px;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        
+        .col {
+            width: 33%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+        .badge {
+            text-transform: uppercase;
+            color: var(--color-white);
+            background-color: var(--color-grey);
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 5px;
+            letter-spacing: 2px;
+            font-size: 10px;
+        }
+        
+        .badge-grey {
+            background-color: var(--color-grey);
+        }
+        
+        .badge-green {
+            background-color: #8bc34a;
+        }
+        
+        .badge-blue {
+            background-color: #3089fc;
+        }
+        
+        .badge-red {
+            background-color: #f23a2f;
+        }
+        
+        .blog-post .post-item .post-avata {
+            width: 100%;
+        }
+        
+        .blog-post .post-item .post-avata img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        
+        .blog-post .post-item .post-body {
+            padding: 15px 10px;
+        }
+        
+        .blog-post .post-item .title {
+            color: var(--color-black);
+            font-size: 18px;
+            line-height: 1.5;
+            padding: 10px 0;
+        }
+        
+        .blog-post .post-item .auther {
+            font-size: 12px;
+            color: var(--color-grey);
+            padding-bottom: 10px;
+        }
+        
+        .blog-post .post-item .auther .far {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        
+        .blog-post .post-item .auther span {
+            font-weight: 700;
+            color: var(--color-black);
+        }
+        
+        .blog-post .post-item .description {
+            color: var(--color-grey);
+            padding-bottom: 10px;
+        }
+        
+        .blog-post .post-item .read-more {
+            color: var(--color-link);
+        }
+        
+        .blog-post .row {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .paginate ul {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .paginate-item {
+            background-color: #3089fc;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .paginate-item.active {
+            background-color: transparent;
+        }
+        
+        .paginate-item.active {
+            color: #000;
+        }
+        
+        .paginate-item a {
+            color: #fff;
+        }
+        /* end blog post */
+        /* footer */
+        
+        .footer {
+            background-color: #333333;
+            color: #999999;
+            padding: 50px;
+        }
+        
+        .footer a {
+            color: #999999;
+        }
+        
+        .footer .title {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .footer-sub-link {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .footer-sub-link li {
+            width: 50%;
+            padding: 5px 10px;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .footer-bot {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        @media screen all end (min-width: 320px) and (max-width:676px) {
+            .col-page1 {
+                width: 100% !important;
+            }
+            .thumbnail {
+                width: 100% !important;
+                flex-wrap: wrap;
+            }
+            .post-item-1 {
+                width: 100% !important;
+                flex-wrap: wrap;
+            }
+            .body {
+                width: 100% !important;
+                flex-wrap: wrap;
+            }
+            .title {
+                width: 100% !important;
+                flex-wrap: wrap;
+            }
+            .time {
+                width: 100% !important;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="header_logo"><a href="#">Zent's Blog</a></div>
+        <div class="header_menu">
+            <ul class="main-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">Tech</a></li>
+                <li><a href="#">Entertainment</a></li>
+                <li><a href="#">Travel</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#"><i class="fas fa-search"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- end header -->
+
+    <!-- body -->
+    <div class="main-content">
+        <div class="box-post-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-page1">
+                        <div class="post-item-1">
+                            <div class="thumbnail"><img src="./images/3.png"></div>
+                            <div class="body">
+                                <div class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                <div class="time">July 19, 2019</div>
+                            </div>
+                        </div>
+                        <div class="post-item-1">
+                            <div class="thumbnail"><img src="./images/4.png"></div>
+                            <div class="body">
+                                <div class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                <div class="time">July 19, 2019</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-page1">
+                        <div class="post-item-1 h-100">
+                            <div class="thumbnail"><img src="./images/6.png"></div>
+                            <div class="body">
+                                <div>
+                                    <span class="badge badge-red">Travel</span>
+                                    <span class="badge badge-blue">Food</span>
+                                </div>
+                                <div class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                <div class="time">July 19, 2019</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-page1">
+                        <div class="post-item-1">
+                            <div class="thumbnail"><img src="./images/1.png"></div>
+                            <div class="body">
+                                <div class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                <div class="time">July 19, 2019</div>
+                            </div>
+                        </div>
+                        <div class="post-item-1">
+                            <div class="thumbnail"><img src="./images/2.png"></div>
+                            <div class="body">
+                                <div class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                <div class="time">July 19, 2019</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blog-post">
+            <div class="container">
+                <h2>Recent Post</h2>
+                <div class="row">
+                    <div class="col">
+                        <div class="post-item">
+                            <div class="post-avata"><img src="./images/1.png"></div>
+                            <div class="post-body">
+                                <div><span class="badge badge-grey">Politics</span></div>
+                                <h3 class="title">The AI magically removes moving object from videos.</h3>
+                                <div class="auther">
+                                    <i class="far fa-user-circle"></i> By <span>carroll</span> - July 19, 2019
+                                </div>
+                                <div class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates quas velit animi, voluptatum dicta voluptatem laborum magni facere ea aliquam impedit consequuntur. Numquam adipisci asperiores earum sunt harum impedit
+                                    delectus.
+                                </div>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="post-item">
+                            <div class="post-avata"><img src="./images/1.png"></div>
+                            <div class="post-body">
+                                <div><span class="badge badge-green">Nature</span></div>
+                                <h3 class="title">The AI magically removes moving object from videos.</h3>
+                                <div class="auther">
+                                    <i class="far fa-user-circle"></i> By <span>carroll</span> - July 19, 2019
+                                </div>
+                                <div class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates quas velit animi, voluptatum dicta voluptatem laborum magni facere ea aliquam impedit consequuntur. Numquam adipisci asperiores earum sunt harum impedit
+                                    delectus.
+                                </div>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="post-item">
+                            <div class="post-avata"><img src="./images/1.png"></div>
+                            <div class="post-body">
+                                <div><span class="badge badge-red">Sports</span></div>
+                                <h3 class="title">The AI magically removes moving object from videos.</h3>
+                                <div class="auther">
+                                    <i class="far fa-user-circle"></i> By <span>carroll</span> - July 19, 2019
+                                </div>
+                                <div class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates quas velit animi, voluptatum dicta voluptatem laborum magni facere ea aliquam impedit consequuntur. Numquam adipisci asperiores earum sunt harum impedit
+                                    delectus.
+                                </div>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="post-item">
+                            <div class="post-avata"><img src="./images/1.png"></div>
+                            <div class="post-body">
+                                <div><span class="badge badge-grey">Politics</span></div>
+                                <h3 class="title">The AI magically removes moving object from videos.</h3>
+                                <div class="auther">
+                                    <i class="far fa-user-circle"></i> By <span>carroll</span> - July 19, 2019
+                                </div>
+                                <div class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates quas velit animi, voluptatum dicta voluptatem laborum magni facere ea aliquam impedit consequuntur. Numquam adipisci asperiores earum sunt harum impedit
+                                    delectus.
+                                </div>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="post-item">
+                            <div class="post-avata"><img src="./images/1.png"></div>
+                            <div class="post-body">
+                                <div><span class="badge badge-grey">Politics</span></div>
+                                <h3 class="title">The AI magically removes moving object from videos.</h3>
+                                <div class="auther">
+                                    <i class="far fa-user-circle"></i> By <span>carroll</span> - July 19, 2019
+                                </div>
+                                <div class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates quas velit animi, voluptatum dicta voluptatem laborum magni facere ea aliquam impedit consequuntur. Numquam adipisci asperiores earum sunt harum impedit
+                                    delectus.
+                                </div>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="post-item">
+                            <div class="post-avata"><img src="./images/1.png"></div>
+                            <div class="post-body">
+                                <div><span class="badge badge-grey">Politics</span></div>
+                                <h3 class="title">The AI magically removes moving object from videos.</h3>
+                                <div class="auther">
+                                    <i class="far fa-user-circle"></i> By <span>carroll</span> - July 19, 2019
+                                </div>
+                                <div class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates quas velit animi, voluptatum dicta voluptatem laborum magni facere ea aliquam impedit consequuntur. Numquam adipisci asperiores earum sunt harum impedit
+                                    delectus.
+                                </div>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="paginate">
+                    <ul>
+                        <li class="paginate-item"><a href="#">1</a></li>
+                        <li class="paginate-item"><a href="#">2</a></li>
+                        <li class="paginate-item"><a href="#">3</a></li>
+                        <li class="paginate-item"><a href="#">4</a></li>
+                        <li class="paginate-item"><a href="#">5</a></li>
+                        <li class="paginate-item"><a href="#">6</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end body -->
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col">
+                        <div>
+                            <div class="title">About Us</div>
+                            <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt magnam doloribus harum dolore, sint laborum excepturi blanditiis? Impedit tenetur obcaecati eos eligendi, dicta hic id pariatur. Dignissimos autem impedit molestiae!</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <ul class="footer-sub-link">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Advertise</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Subcribes</a></li>
+                            <li><a href="#">Travel</a></li>
+                            <li><a href="#">Lifestyle</a></li>
+                            <li><a href="#">Sports</a></li>
+                            <li><a href="#">Nature</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <div class="title">Connect With Us</div>
+                            <ul class="footer-social">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bot">Copyright &copy; 2021 All right reserved | This template is made with by Zent Coding School
+            </div>
+        </div>
+    </div>
+    <!-- end footer -->
+
+</body>
+
+</html>

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <style>
+        .minispace {
+            padding-left: 115px;
+        }
+        
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        
+        #myBtn:hover {
+            background-color: #555;
+        }
+        
+        h2 {
+            padding: 25px 0;
+            text-align: center;
+            color: #fff;
+            background: #7c8490;
+        }
+        
+        footer {
+            background: rgb(9, 95, 234);
+            color: white;
+            margin-top: 100px;
+        }
+        
+        footer a {
+            color: #fff;
+            font-size: 14px;
+            transition-duration: 0.2s;
+        }
+        
+        footer a:hover {
+            color: #FA944B;
+            text-decoration: none;
+        }
+        
+        .copy {
+            font-size: 12px;
+            padding: 10px;
+            border-top: 1px solid #FFFFFF;
+        }
+        
+        .footer-middle {
+            padding-top: 2em;
+            color: white;
+        }
+        
+        ul.social-network {
+            list-style: none;
+            display: inline;
+            margin-left: 0 !important;
+            padding: 0;
+        }
+        
+        ul.social-network li {
+            display: inline;
+            margin: 0 5px;
+        }
+        
+        .social-network a.icoFacebook:hover {
+            background-color: #3B5998;
+        }
+        
+        .social-network a.icoLinkedin:hover {
+            background-color: #007bb7;
+        }
+        
+        .social-network a.icoFacebook:hover i {
+            color: #fff;
+        }
+        
+        .social-network a.icoLinkedin:hover i {
+            color: #fff;
+        }
+        
+        .social-network a.socialIcon:hover {
+            color: #44BCDD;
+        }
+        
+        .socialHoverClass {
+            color: #44BCDD;
+        }
+        
+        .social-circle li a {
+            display: inline-block;
+            position: relative;
+            margin: 0 auto 0 auto;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            font-size: 15px;
+        }
+        
+        .social-circle li i {
+            margin: 0;
+            line-height: 30px;
+            text-align: center;
+        }
+        
+        .social-circle li a:hover i {
+            -moz-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -ms--transform: rotate(360deg);
+            transform: rotate(360deg);
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -o-transition: all 0.2s;
+            -ms-transition: all 0.2s;
+            transition: all 0.2s;
+        }
+        
+        .triggeredHover {
+            -moz-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -ms--transform: rotate(360deg);
+            transform: rotate(360deg);
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -o-transition: all 0.2s;
+            -ms-transition: all 0.2s;
+            transition: all 0.2s;
+        }
+        
+        .social-circle i {
+            color: #595959;
+            -webkit-transition: all 0.8s;
+            -moz-transition: all 0.8s;
+            -o-transition: all 0.8s;
+            -ms-transition: all 0.8s;
+            transition: all 0.8s;
+        }
+        
+        .social-network a {
+            background-color: #F9F9F9;
+        }
+        
+        .social-network a:hover {
+            background: #ff304d;
+        }
+        
+        .megamenu {
+            position: static;
+        }
+        
+        .megamenu .dropdown-menu {
+            background: none;
+            border: none;
+            width: 100%;
+        }
+        
+        code {
+            color: #745eb1;
+            background: #fff;
+            padding: 0.1rem 0.2rem;
+            border-radius: 0.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <header>
+        <div>
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <div class="justify-content-lg-start">
+                    <a class="navbar-brand col-lg-9 col-md-6 col-12 " href="file:///C:/Users/ADMIN/Desktop/WRBFE40/the%20last/start%20page/big/index.html">
+                        <img src="IMG_MAIN/logo.jpg" alt="logo" style="width:40px">
+                    </a>
+                </div> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                    <ul class="navbar-nav justify-content-around">
+                        <li class="nav-item">
+                            <a class="nav-link" style="margin-right: 100px;">
+                                <form class="form-inline" action="/action_page.php">
+                                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                                    <button class="btn btn-success" type="submit">Search</button>
+                                </form>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <p style="color:white ; margin-top: 10px;"> contact to Us <a href=""><i class="fa-brands fa-instagram"></i></a></p>
+
+                        </li>
+
+                    </ul>
+
+
+                </div>
+
+            </nav>
+            <div>
+                <div>
+                    <div id="demo" class="carousel slide" data-ride="carousel">
+
+                        <!-- Indicators -->
+                        <ul class="carousel-indicators">
+                            <li data-target="#demo" data-slide-to="0" class="active"></li>
+                            <li data-target="#demo" data-slide-to="1"></li>
+                            <li data-target="#demo" data-slide-to="2"></li>
+                        </ul>
+
+                        <!-- The slideshow -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="IMG_MAIN/New folder/PUBG-Banner-804x452.png" alt="Los Angeles" width="100%" height="500">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="IMG_MAIN/New folder/PUBG-Banner-804x452.png" alt="Chicago" width="100%" height="500">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="IMG_MAIN/New folder/PUBG-Banner-804x452.png" alt="New York" width="100%" height="500">
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+    </header>
+    <main>
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-sm-12 col-8">
+                    <div id="section1">
+                        <div class="container">
+                            <div style="color: blue ; text-align: center; font-size: 40px;"> introduce</div>
+                            <p style="text-align: center;">Súng bắn đạn ghém (Shotgun): Tương tự như SMG, ngoại trừ có tốc độ bắn chậm hơn SMG và lượng đạn ít hơn. Shotgun có thể hạ gục một kẻ địch ở tầm gần và thậm chí có thể hạ gục kẻ địch đang có trang bị cấp 3 đầy đủ chỉ bằng 1
+                                viên đạn nếu bắn chính xác. Nhược điểm là vô dụng ở tầm xa (ngoài 80m) và lượng đạn khá hạn chế. Các dòng shotgun có thể dễ dàng tìm kiếm khắp mọi nơi ở trên bản đồ, ngoại trừ súng shotgun DBS là vũ khí shotgun duy nhất
+                                nằm trong hòm airdrop ở bản cập nhật 4.3. Tuy nhiên, bản cập nhật 6.3 của PUBG cũng đã chính thức đưa shotgun DBS ra khỏi hòm airdrop và xuất hiện ở bản đồ với tỉ lệ hiếm.
+
+                        </div>
+
+
+                    </div>
+                    <div>
+                        <div>
+                            <p style="font-size: 20px;" style="border: 1px solid black ; padding-right: 5px;padding-left: 5px;">table of content</p>
+                            <ul>
+                                <li> Shotguns Damage Chart</li>
+                                <li>Shotguns Information</li>
+                                <li>BestShotguns in PUBG: New State</li>
+                                <li>Conclusion</li>
+                            </ul>
+
+                            <p style="color: red;font-size: 30;">Shotguns Information
+                            </p>
+                            <p style="font-size: 20px;"> Shotguns Features</p>
+                            <p><a href="" style="color: red;">Great Body shot damage: </a>
+                                <a href="">This weapon has great body shot damage. It deals more than 219 damage per shot in close-range that can easily take down the enemy so quickly.</a></p>
+                            <p><a href="" style="color: red;">Close Range God: </a>
+                                <a href="">Shotguns are the best close-range weapon in PUBG: New State. It needs only 1 or 2 shots to eliminate the enemy. </a></p>
+
+                            <p><a href="" style="color: red;">Auto Function:</a>
+                                <a href="">S12K & DBS are auto shotguns that have a good fire rate and damage. </a>
+
+                                <li>
+                                    <a href="" style="color: red;">Ammunnition
+                                    </a>
+                                    <li style="margin-left: 30px;">
+                                        12 Gauge: S12K, S686, S1897, DBS.
+                                    </li>
+
+                                </li>
+
+                            </p>
+                            <p><a href="" style="color: red;">Air Drop Exclusive:</a>
+                                <a href="">Shotguns can not be found in Air-Drop.</a></p>
+                            <p>
+                                Shotguns Guides
+
+                            </p>
+                            <p><a href="" style="color: red;">Good at Defense Strategy:</a>
+                                <a href=""> Good to use for defense yourself when there was the enemy try to hunt you down while you were looting. Shotguns are the best choice to use</a></p>
+                            <p><a href="" style="color: red;">Aim at Upper Body area:</a>
+                                <a href=""> Always aim upper body because when your enemy got only Level 1 or 2 Armor, you can knock them down in just 2 shots.</a></p>
+                            <p><a href="" style="color: red;">Best at the Start of the Game:</a>
+                                <a href="">When you get shotgun at the start of the game you can easily push forward the enemy and destroy them with 1 shot when they got no armor. </a></p>
+
+
+                        </div>
+
+                    </div>
+                    <div>
+
+
+
+                        <div class="solution-wrap" style="margin-top:50px ;">
+                            <div class="container-fluid">
+
+
+                                <div class="row " style="display: flex; flex-wrap: wrap; ">
+
+                                    <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                        <div class="card">
+                                            <img src="dbs.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                            <div class="card-body" style="justify-content: center;">
+                                                <h4 class="card-title" style="text-align: center;">DBS</h4>
+                                                <p class="card-text" style="text-align: center;"> 12mm</p>
+                                                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo1" style="margin-left: auto; margin-right: auto;width: 100%;">more info</button>
+                                                <div id="demo1" class="collapse">
+                                                    <table>
+                                                        <tr style="width:100%">
+                                                            <td> DMG</td>
+                                                            <td></td>
+                                                            <td>26x9</td>
+
+
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td> RS</td>
+                                                            <td style="width:73%"></td>
+                                                            <td> 0.4s</td>
+
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td> mode</td>
+                                                            <td></td>
+                                                            <td> Fast Burst</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                        <div class="card">
+                                            <img src="s12k.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                            <div class="card-body">
+                                                <h4 class="card-title">s12k</h4>
+                                                <p class="card-text">12mm</p>
+                                                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo2" style="margin-left: auto; margin-right: auto;width: 100%;">more info</button>
+                                                <div id="demo2" class="collapse">
+                                                    <table>
+                                                        <tr style="width:100%">
+                                                            <td> DMG</td>
+                                                            <td></td>
+                                                            <td>24x9</td>
+
+
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td> RS</td>
+                                                            <td style="width:73%"></td>
+                                                            <td> 3s</td>
+
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td> mode</td>
+                                                            <td></td>
+                                                            <td> auto</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                        <div class="card">
+                                            <img src="s1897.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                            <div class="card-body">
+                                                <h4 class="card-title">s1897</h4>
+                                                <p class="card-text">12mm </p>
+                                                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo3" style="margin-left: auto; margin-right: auto;width: 100%;">more info</button>
+                                                <div id="demo3" class="collapse">
+                                                    <table>
+                                                        <tr style="width:100%">
+                                                            <td> DMG</td>
+                                                            <td></td>
+                                                            <td>26x9</td>
+
+
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td> RS</td>
+                                                            <td style="width:73%"></td>
+                                                            <td> 2.3s</td>
+
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td> mode</td>
+                                                            <td></td>
+                                                            <td> single</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-12" style="margin-bottom:20px;">
+                                        <div class="card">
+                                            <img src="s686.jpg" class="align-self-start mr-3" style="width:100%">
+
+                                            <div class="card-body">
+                                                <h4 class="card-title">s686</h4>
+                                                <p class="card-text">12mm </p>
+                                                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo4" style="margin-left: auto; margin-right: auto;width: 100%;">more info</button>
+                                                <div id="demo4" class="collapse">
+                                                    <table>
+                                                        <tr style="width:100%">
+                                                            <td> DMG</td>
+                                                            <td></td>
+                                                            <td>26x9</td>
+
+
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td> RS</td>
+                                                            <td style="width:73%"></td>
+                                                            <td> 0.7s</td>
+
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td> mode</td>
+                                                            <td></td>
+                                                            <td> Fast Burst</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="mainfooter" role="contentinfo">
+        <div class="footer-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer-pad">
+                            <h4> Footer Heading 1</h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#"> </a>
+                                </li>
+                                <li> <a href="#">Payment Center</a></li>
+                                <li> <a href="#"> Contact Directory </a></li>
+                                <li> <a href="#">Forms</a></li>
+                                <li> <a href="#">News and Updates</a></li>
+                                <li> <a href="#">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer-pad">
+                            <h4> Footer Heading 2</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="#"> Blog </a> </li>
+                                <li><a href="#">Accessibility</a> </li>
+                                <li><a href="#">Disclaimer</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Webmaster</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footer-pad">
+                            <h4> Footer Heading 3 </h4>
+                            <ul class="list-unstyled">
+                                <li> <a href="#"> Parks and Recreation </a> </li>
+                                <li> <a href="#"> Public Works </a> </li>
+                                <li> <a href="#">Police Department</a> </li>
+                                <li> <a href="#"> Fire </a> </li>
+                                <li> <a href="#"> Mayor and City Council </a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h4> Follow Us </h4>
+                        <ul class="social-network social-circle">
+                            <li>
+                                <a href="#" class="icoFacebook" title="Facebook"> <i class="fa fa-facebook"> </i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="icoLinkedin" title="Linkedin"> <i class="fa fa-linkedin"> </i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"> <i class="fa fa-youtube" aria-hidden="true"> </i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 copy">
+                        <p class="text-center"> © Copyright 2021 - Company Name. All rights reserved. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        //hover tooltip
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

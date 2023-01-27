@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #button {
+            width: 70%;
+            height: 50px;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+        
+        #text {
+            width: 70%;
+            height: 200px;
+        }
+        
+        #nor {
+            color: white;
+            background-color: blueviolet;
+            border: none;
+            width: 100px;
+            height: 100%;
+        }
+        
+        #big {
+            color: white;
+            background-color: blueviolet;
+            border: none;
+            width: 100px;
+            height: 100%;
+        }
+        
+        #small {
+            color: white;
+            background-color: blueviolet;
+            border: none;
+            width: 100px;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="button">
+        Cỡ Chữ
+        <button id="nor">Mặc Định</button>
+        <button id="big">Chữ Lớn</button>
+        <button id="small">Chữ Nhỏ</button>
+    </div>
+    <div id="text">
+        Nhìn nó không được đẹp nhưng nói chung là Ô Cê La. ☺ ☺ ☺ Nhìn nó không được đẹp nhưng nói chung là Ô Cê La. ☺ ☺ ☺ Nhìn nó không được đẹp nhưng nói chung là Ô Cê La. ☺ ☺ ☺ Nhìn nó không được đẹp nhưng nói chung là Ô Cê La. ☺ ☺ ☺ Nhìn nó không được đẹp
+        nhưng nói chung là Ô Cê La. ☺ ☺ ☺ Nhìn nó không được đẹp nhưng nói chung là Ô Cê La. ☺ ☺ ☺ Nhìn nó không được đẹp nhưng nói chung là Ô Cê La. ☺ ☺ ☺
+
+
+    </div>
+    <script>
+        var sizeMặcĐịnh = 16;
+        var text = document.getElementById('text');
+        text.style.fontSize = sizeMặcĐịnh + 'px';
+
+
+        var big = document.getElementById('big');
+        big.addEventListener('click', function() {
+            sizeMặcĐịnh = sizeMặcĐịnh * 1.4;
+            text.style.fontSize = sizeMặcĐịnh + 'px';
+        });
+        var small = document.getElementById('small');
+        small.addEventListener('click', function() {
+            sizeMặcĐịnh = sizeMặcĐịnh * 0.6;
+            text.style.fontSize = sizeMặcĐịnh + 'px';
+        });
+        var nor = document.getElementById('nor');
+        nor.addEventListener('click', function() {
+            text.style.fontSize = '16px';
+        });
+    </script>
+</body>
+
+</html>

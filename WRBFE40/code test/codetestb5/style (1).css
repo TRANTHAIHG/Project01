@@ -1,0 +1,150 @@
+/*common*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    font-family: Arial;
+    color: #000;
+    font-weight: 400;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.clear-fix{
+    clear: both;
+}
+img{
+    width: 100%;
+}
+/*header*/
+header{
+    background-color: yellow;
+    padding: 15px 30px;
+}
+.logo-header{
+    float: left;
+}
+.menu-wrap{
+    float: right;
+}
+.menu-wrap ul li {
+    float: left;
+    padding: 0 15px;
+}
+/*main*/
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+main{
+    /*max-width: 1200px;*/
+    /*margin: 0 auto;*/
+}
+.blog-list{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+}
+.blog-item{
+    float: left;
+    width: calc(100% / 3);
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+.post-avata img{
+    width: 100%;
+}
+.center {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+/*highlight*/
+.posts-highlight{
+    padding: 100px 0;
+    background-color: red;
+}
+.posts-highlight .col{
+    float: left;
+    width: calc(100% / 3);
+    padding: 0 15px;
+}
+/*.highlight-item{*/
+/*    position: relative;*/
+/*    height: 300px;*/
+/*    background-image: linear-gradient(to top, #000000b5 , #fff0);*/
+/*}*/
+/*.highlight_img{*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    !*width: 100%;*!*/
+/*    !*height: 100%;*!*/
+/*    z-index: -1;*/
+/*}*/
+/*.highlight_body{*/
+/*    position: absolute;*/
+/*    left: 20px;*/
+/*    bottom: 20px;*/
+/*}*/
+/*.highlight_title{*/
+/*    color: #fff;*/
+/*    font-size: 20px;*/
+/*    font-weight: 900;*/
+/*    z-index: 2;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+/*.highlight_time{*/
+/*    color: #ccc;*/
+/*    z-index: 2;*/
+/*}*/
+.highlight-item{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    box-shadow: inset 0px -67px 59px 0px #00000073;
+    position: relative;
+}
+.highlight-item-1{
+    height: 235px;
+    margin-bottom: 30px;
+}
+.highlight-item-2{
+    height: 500px;
+}
+.highlight_body{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+.highlight_title{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.highlight_time{
+    color: #ccc;
+}
+/*footer*/

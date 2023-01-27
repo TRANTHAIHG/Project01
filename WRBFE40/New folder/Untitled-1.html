@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery siêu tốc</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+
+<body>
+
+    <p id="content ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, 11 <button>FadeIn</button> <button>FadeOut</button> <button>FadeTo</button>
+        <script>
+            $(document).ready(function() {
+                $('button').eq(0).on('click', function() {
+                    $('#content').fadeIn(3000);
+
+                })
+                $('button').eq(1).on('click', function() {
+                    $('#content').fadeOut(3000);
+
+                })
+                $('button').eq(2).on('click', function() {
+                    $('#content').fadeTo(3000, 0.4);
+
+                })
+
+
+            });
+        </script>
+</body>
+
+</html>

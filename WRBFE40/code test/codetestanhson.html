@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="./JS/jquery-3.6.0.min.js"></script>
+    <style>
+        #container {
+            width: 70%;
+            background-color: rgb(56, 54, 54);
+            color: white;
+            margin-left: 15%;
+        }
+        
+        button {
+            width: 100%;
+            height: 50px;
+            color: orange;
+            border: 1px groove;
+            background-color: rgb(56, 54, 54);
+        }
+        
+        p {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="conten1">
+            <button type="button" id="but1">Lorem ipsum dolor.</button>
+            <p id="p1">Nhìn xấu thế thôi nhưng mà nó đẹp trai lỗi tại ai đưa em về đâu mái tóc người thương anh thật không phải em thì anh sống sao </p>
+        </div>
+        <div class="conten2">
+            <button type="button" id="but2">Lorem ipsum dolor.</button>
+            <p id="p2">Nhìn xấu thế thôi nhưng mà nó đẹp trai lỗi tại ai đưa em về đâu mái tóc người thương anh thật không phải em thì anh sống sao Nhìn xấu thế thôi nhưng mà nó đẹp trai lỗi tại ai đưa em về đâu mái tóc người thương anh thật không phải em thì anh
+                sống sao Nhìn xấu thế thôi nhưng mà nó đẹp trai lỗi tại ai đưa em về đâu mái tóc người thương anh thật không phải em thì anh sống sao Nhìn xấu thế thôi nhưng mà nó đẹp trai lỗi tại ai đưa em về đâu mái tóc người thương anh thật không phải
+                em thì anh sống sao</p>
+        </div>
+        <div class="conten3">
+            <button type="button" id="but3">Lorem ipsum dolor.</button>
+            <p id="p3">Nhìn xấu thế thôi nhưng mà nó đẹp trai lỗi tại ai đưa em về đâu mái tóc người thương anh thật không phải em thì anh sống saoNhìn xấu thế thôi nhưng mà nó đẹp trai lỗi tại ai đưa em về đâu mái tóc người thương anh thật không phải em thì anh
+                sống sao</p>
+        </div>
+        <div class="conten4">
+            <button type="button" id="but4">Lorem ipsum dolor.</button>
+            <p id="p4">Nhìn xấu thế thôi nhưng mà nó đẹp trai lỗi tại ai đưa em về đâu mái tóc người thương anh thật không phải em thì anh sống saoNhìn xấu thế thôi nhưng mà nó đẹp trai lỗi tại ai đưa em về đâu mái tóc người thương anh thật không phải em thì anh
+                sống saoNhìn xấu thế thôi nhưng mà nó đẹp trai lỗi tại ai đưa em về đâu mái tóc người thương anh thật không phải em thì anh sống saoNhìn xấu thế thôi nhưng mà nó đẹp trai lỗi tại ai đưa em về đâu mái tóc người thương anh thật không phải
+                em thì anh sống saoNhìn xấu thế thôi nhưng mà nó đẹp trai lỗi tại ai đưa em về đâu mái tóc người thương anh thật không phải em thì anh sống saoNhìn xấu thế thôi nhưng mà nó đẹp trai lỗi tại ai đưa em về đâu mái tóc người thương anh thật
+                không phải em thì anh sống sao</p>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#p1").hide();
+            $(".conten1").click(function() {
+                $("#p1").toggle();
+                $("#p2,#p3,#p4").hide();
+            });
+            $("#p2").hide();
+            $(".conten2").click(function() {
+                $("#p2").toggle();
+                $("#p1,#p3,#p1").hide();
+            });
+            $("#p3").hide();
+            $(".conten3").click(function() {
+                $("#p3").toggle();
+                $("#p2,#p1,#p4").hide();
+            });
+            $(".conten4").click(function() {
+                $("#p4").toggle();
+                $("#p2,#p3,#p1").hide();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

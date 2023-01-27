@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: unset;
+            box-sizing: border-box;
+        }
+        
+        .contentner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+            font-weight: 900;
+            color: var(--color-black);
+        }
+        
+        .header a {
+            color: var(--color-black);
+        }
+        
+        .header_logo {
+            font-size: 20px;
+        }
+        
+        .main-menu {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .main-menu li {
+            padding: 15px 10px;
+        }
+        
+        body {
+            background-color: var(--color-white);
+            font-size: 14px;
+            font-weight: 400;
+            font-family: "Roboto", sans-serif;
+            color: var(--color-black);
+            line-height: 1.2;
+        }
+        
+        .thumbnail {
+            height: 600px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            position: relative;
+        }
+        
+        .body {
+            position: absolute;
+            left: 10%;
+            bottom: 30%;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .title {
+            color: #fff;
+            font-size: 50px;
+            text-align: center;
+        }
+        
+        .time {
+            color: #fff;
+            text-align: center;
+        }
+        
+        .main-content {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .big {
+            width: 55%;
+            float: left;
+            margin-left: 5%;
+        }
+        
+        .small {
+            width: 30%;
+            float: left;
+            margin-left: 5%;
+        }
+        
+        #anh-1 {
+            width: 100%;
+            margin-bottom: 3%;
+        }
+        
+        #anh-2 {
+            width: 48%;
+            float: left;
+            margin-right: 2%;
+        }
+        
+        #anh-3 {
+            width: 48%;
+            float: left;
+            margin-left: 2%;
+        }
+        
+        #anh-4 {
+            width: 40%;
+            border-radius: 50%;
+            margin-left: 100px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        #botron {
+            border-radius: 50%;
+        }
+        
+        p {
+            margin: 15px 0;
+        }
+        
+        #div-con1 {
+            background-color: rgb(18, 192, 56);
+            display: block;
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            padding-top: 6px;
+            border-radius: 5px;
+            color: #fff;
+            margin-left: 300px;
+            font-size: 15px;
+        }
+        
+        #div-con2 {
+            background-color: rgb(69, 1, 255);
+            display: block;
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            padding-top: 6px;
+            border-radius: 5px;
+            color: #fff;
+            margin-left: 100px;
+        }
+        
+        #div-con3 {
+            padding-bottom: 20px;
+        }
+        
+        #div-h0 {
+            width: 100%;
+            height: 130px;
+        }
+        
+        #div-h4 {
+            width: 100%;
+            height: 30px;
+        }
+        
+        .anh-nho {
+            width: 30%;
+            height: 150px;
+            float: left;
+            padding-top: 20px;
+        }
+        
+        .h4-nho {
+            width: 70%;
+            float: left;
+            height: 150px;
+            padding-top: 20px;
+        }
+        
+        .div-con4 {
+            float: left;
+            width: 80%;
+            height: 50px;
+            color: blue;
+            padding-top: 20px;
+        }
+        
+        .div-con5 {
+            float: left;
+            width: 20%;
+            height: 50px;
+            color: cadetblue;
+            padding-top: 20px;
+        }
+        
+        #div-con6 {
+            height: 150px;
+        }
+        
+        #div-con7 {
+            padding-bottom: 20px;
+        }
+        
+        #div-con8 {
+            margin-top: 30px;
+        }
+        
+        #div-con9 {
+            height: 30px;
+            float: left;
+            background-color: rgba(210, 221, 221, 0.808);
+            border-radius: 5px;
+            margin-left: 4px;
+            margin-bottom: 4px;
+            display: block;
+            text-align: center;
+            padding-top: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_logo"><a href="#">Zent's Blog</a></div>
+        <div id="id1"><i class="fa-solid fa-bars"></i>
+            <div class="header_menu">
+                <ul class="main-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Politics</a></li>
+                    <li><a href="#">Tech</a></li>
+                    <li><a href="#">Entertainment</a></li>
+                    <li><a href="#">Travel</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#"><i class="fas fa-search"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="box-post-1">
+        <div class="main-content">
+            <div class="row">
+                <div class="col col-tl1">
+                    <div class="post-item-1">
+                        <div class="thumbnail" style="background-image: url('../buoi7/image/Bản\ sao\ của\ anh_1.webp')">
+                            <div class="body">
+                                <div class="title">
+                                    <div id="div-con1">NATURE</div>
+                                    <p>Lorem Iusto optio ab quisquam incidunt soluta maxime ea veritatis repellat dignissimos rerum!</p>
+                                </div>
+                                <div class="time">
+                                    <img id="botron" width="30px" height="30px" src="./image/Bản sao của anh_1.webp" alt=""> By carrol atkinson - February 10, 2019
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contentner">
+        <div class="big">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla vitae cupiditate obcaecati culpa mollitia voluptas adipisci itaque illo odit delectus assumenda quasi, earum tenetur, rem, ex minima voluptate nostrum sunt!</h6>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab, ut odit ipsam repudiandae quas. Sint facere maiores dicta laudantium nisi, ratione eveniet minus, fuga libero deleniti voluptas? Atque quas minus animi maiores. Eaque
+                    magnam, voluptatum voluptate veniam nemo delectus, aperiam voluptas quod dolorum voluptatem doloremque officia ex, fuga earum?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim eveniet quaerat pariatur sed accusamus doloremque nam officia ad, dolorum dolorem, rem in voluptates earum neque! Exercitationem provident quasi illo vitae nisi maiores ipsa
+                    nostrum expedita, itaque odio velit ab non quidem reiciendis iusto possimus facilis debitis eligendi tenetur? Eos, ipsum.</p>
+                <img id="anh-1" src="../buoi7/image/Bản sao của anh_1.webp" alt="">
+                <img id="anh-2" src="../buoi7/image/Bản sao của anh_1.webp" alt="">
+                <img id="anh-3" src="../buoi7/image/Bản sao của anh_1.webp" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, molestiae similique deserunt blanditiis nemo possimus, a soluta quae corporis exercitationem ullam esse neque officiis repudiandae tenetur sequi vel quis nostrum cum commodi!
+                    Debitis sequi perferendis quis, culpa doloribus nisi explicabo fuga quas quod cum necessitatibus quos similique veritatis sit expedita cumque eligendi iusto quibusdam officiis!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis minima perferendis ipsam dolorum aspernatur animi, ab iste doloremque nihil, ducimus reprehenderit et enim neque nisi laudantium nobis! Iusto, ratione nisi sed itaque quisquam
+                    ex! Fugiat similique nihil recusandae excepturi nisi incidunt et libero possimus obcaecati nemo? Hic sunt ad deserunt qui pariatur architecto, enim sapiente sequi accusantium consequuntur, dignissimos ea aut facilis odio fugit iure?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut iusto debitis aliquam consectetur, nesciunt quos obcaecati illum ipsum similique ratione ea itaque recusandae qui et, pariatur sit, eligendi iste modi nisi accusantium odit
+                    vel quis! Dolores debitis ducimus hic fugiat facilis harum suscipit perspiciatis eum? Suscipit quas ab in magni!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, at sapiente sed odit, maiores nesciunt ad ipsum mollitia fuga maxime in. Vel facilis, modi vitae qui quos beatae non laudantium culpa magni maxime vero quia optio, minima
+                    magnam consequuntur! Debitis exercitationem tenetur, qui beatae fugiat rerum autem reiciendis doloremque voluptas?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est nisi, unde esse vel accusantium asperiores magnam enim, incidunt, quas quia voluptates iusto blanditiis? Libero corrupti expedita adipisci. Facilis sunt corporis explicabo pariatur
+                    accusantium veniam mollitia ad! Id, assumenda amet iste aut dicta laudantium rem quod, dolores quasi necessitatibus adipisci maiores.
+                    <p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor similique necessitatibus voluptatum vel veniam, error atque ullam, labore modi vitae sit quis iure, possimus neque tempora unde aspernatur? Necessitatibus quidem,
+                            esse voluptas a aliquid quibusdam mollitia vero repudiandae unde? Reiciendis iusto, nesciunt ducimus dicta dignissimos quae omnis architecto vel saepe molestias neque eligendi quas officia placeat labore ratione minus in nulla.
+                            Nam enim aliquam cumque.</p>
+        </div>
+        <div class="small">
+            <img id="anh-4" src="./image/Bản sao của anh_1.webp" alt="">
+            <h1>Craig David</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id est commodi quas repellat quaerat aliquid esse fuga iusto quod veritatis magni, numquam voluptas quia provident amet voluptatum minima reprehenderit asperiores suscipit atque earum
+                ut dolores? Dolore, asperiores facilis. Officiis, esse.</p>
+            <div id="div-con2">Read my bio</div>
+            <div id="div-h0"></div>
+            <div id="div-h4">
+                <h4>Popula Post</h4>
+            </div>
+            <hr>
+            <div>
+                <div class="anh-nho"><img width="70px" height="50px" src="./img/anh_1.webp" alt=""></div>
+                <div class="h4-nho">
+                    <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut atque voluptates neque!</h4>
+                    <p>March 15, 2018</p>
+                </div>
+            </div>
+            <div>
+                <div class="anh-nho"><img width="70px" height="50px" src="./img/anh_1.webp" alt=""></div>
+                <div class="h4-nho">
+                    <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut atque voluptates neque!</h4>
+                    <p>March 15, 2018</p>
+                </div>
+            </div>
+            <div>
+                <div class="anh-nho"><img width="70px" height="50px" src="./img/anh_1.webp" alt=""></div>
+                <div class="h4-nho">
+                    <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut atque voluptates neque!</h4>
+                    <p>March 15, 2018</p>
+                </div>
+            </div>
+            <div id="div-con3">
+                <h4>Categories</h4>
+            </div>
+            <hr>
+            <div>
+                <div>
+                    <div class="div-con4">Food</div>
+                    <div class="div-con5">(69)</div>
+                </div>
+                <hr>
+                <div>
+                    <div class="div-con4">Food</div>
+                    <div class="div-con5">(69)</div>
+                </div>
+                <hr>
+                <div>
+                    <div class="div-con4">Food</div>
+                    <div class="div-con5">(69)</div>
+                </div>
+                <hr>
+                <div>
+                    <div class="div-con4">Food</div>
+                    <div class="div-con5">(69)</div>
+                </div>
+                <hr>
+                <div>
+                    <div class="div-con4">Food</div>
+                    <div class="div-con5">(69)</div>
+                </div>
+                <div id="div-con6"></div>
+                <div id="div-con7">
+                    <h4>Tags</h4>
+                </div>
+                <hr>
+                <div id="div-con8">
+                    <div id="div-con9">aaa</div>
+                    <div id="div-con9">odaaegaefo</div>
+                    <div id="div-con9">odfadfdafadfdafo</div>
+                    <div id="div-con9">oadsasdo</div>
+                    <div id="div-con9">ommmmo</div>
+                    <div id="div-con9">côccocoococ</div>
+                    <div id="div-con9">cccccccc</div>
+                    <div id="div-con9">QQ</div>
+                    <div id="div-con9">ssssssssss</div>
+                    <div id="div-con9">uuuuuuu</div>
+                    <div id="div-con9">aaaa</div>
+                    <div id="div-con9">oooooooooooooo</div>
+                    <div id="div-con9">cccccccc</div>
+                    <div id="div-con9">QQ</div>
+                    <div id="div-con9">ssssssssss</div>
+                    <div id="div-con9">uuuuuuu</div>
+                    <div id="div-con9">aaaa</div>
+                    <div id="div-con9">oooooooooooooo</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

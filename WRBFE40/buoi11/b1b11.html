@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list-check-box li {
+            background-color: rgba(186, 184, 184, 0.137);
+            box-shadow: 3px 3px 3px 3px #ccc;
+            margin-top: 10px;
+        }
+        
+        .list-check-box li:hover {
+            background-color: blue;
+        }
+        
+        ul {
+            list-style-type: none !important;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1 style="text-align: center;"> hoc lap trinh tai zent</h1>
+    <div>
+        <ul class="list-check-box">
+            <li>
+                <input type="checkbox" name="" class="input-check">
+                <label for="">Lorem ipsum m eligendi veniam iure laboriosam, dolor illum conseciste, quae numquam, aut blanditiis architecto?</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="input-check">
+                <label for="">Lorem ipsum m eligendi veniam iure laboriosam, dolor illum conseciste, quae numquam, aut blanditiis architecto?</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="input-check">
+                <label for="">Lorem ipsum m eligendi veniam iure laboriosam, dolor illum conseciste, quae numquam, aut blanditiis architecto?</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="input-check">
+                <label for="">Lorem ipsum m eligendi veniam iure laboriosam, dolor illum conseciste, quae numquam, aut blanditiis architecto?</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="input-check">
+                <label for="">Lorem ipsum m eligendi veniam iure laboriosam, dolor illum conseciste, quae numquam, aut blanditiis architecto?</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="input-check">
+                <label for="">Lorem ipsum m eligendi veniam iure laboriosam, dolor illum conseciste, quae numquam, aut blanditiis architecto?</label>
+            </li>
+
+        </ul>
+        <div style="text-align: center">
+            <button type="button" id="checkAll" style=" background-color: orange"> check all</button>
+            <button type="reset" id="unCheckAll" style=" background-color: orange">uncheck all</button>
+        </div>
+    </div>
+    <script>
+        var checkall = document.getElementById('checkAll');
+        var inputs = document.getElementsByClassName('input-check');
+
+        checkall.addEventListener("click", function() {
+            var n = inputs.length;
+            for (var i = 0; i < n; i++)
+                inputs[i].checked = true
+        })
+        unCheckAll.addEventListener("click", function() {
+            var n = inputs.length;
+            for (var i = 0; i < n; i++)
+                inputs[i].checked = false
+        })
+    </script>
+</body>
+
+</html>

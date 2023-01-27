@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        .container {
+            width: 100%;
+            background-color: rgb(102, 163, 223);
+            height: 600px;
+            justify-content: center;
+        }
+        
+        h1 {
+            color: red;
+            text-align: center;
+        }
+        
+        .img {
+            width: 250px;
+            height: 250px;
+            float: left;
+            margin-left: 20px;
+            position: relative;
+        }
+        
+        img {
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+            z-index: 1;
+        }
+        
+        .btnX {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Album ảnh </h1>
+        <div class="img">
+            <img class="anh" src="image3/anh-6.webp" alt="">
+            <i class="text">Ảnh Đẹp</i>
+        </div>
+        <div class="img">
+            <img class="anh" src="image3/anh-6.webp" alt="">
+            <i class="text">Ảnh Đẹp</i>
+        </div>
+        <div class="img">
+            <img class="anh" src="image3/anh-6.webp" alt="">
+            <i class="text">Ảnh Đẹp</i>
+        </div>
+        <div class="img">
+            <img class="anh" src="image3/anh-6.webp" alt="">
+            <i class="text">Ảnh Đẹp</i>
+        </div>
+
+        <div class="btnX">
+            X
+        </div>
+    </div>
+    <!--<script>
+       $(document).ready(function() {
+            $('#text1').hide();
+            $('.btnX').hide();
+            $('#img1').on('click', function() {
+                $('.img1').css('z-index', 1)
+                $('#img1').css('z-index', 2)
+                $('#anh-1').animate({
+                    'left': "500px",
+                    'width': "500px",
+
+                    'position': "fixed",
+                    'height': "500px",
+                    'left': "50%",
+                    'top': "50%",
+                    'transform': "translateX(-50%) translateY(-50%)"
+                }, 1000)
+                $('#text1').show();
+                $('.btnX').show();
+                $("#anh-4,#anh-3,#anh-2").hide();
+            })
+
+
+
+
+
+
+            $('#text2').hide();
+            $('.btnX').hide();
+            $('#img2').on('click', function() {
+                $('.img2').css('z-index', 1)
+                $('#img2').css('z-index', 2)
+                $('#anh-2').animate({
+                    'left': "500px",
+                    'width': "500px",
+
+                    'position': "fixed",
+                    'height': "500px",
+                    'left': "50%",
+                    'top': "50%",
+                    'transform': "translateX(-50%) translateY(-50%)"
+                }, 1000)
+                $('#text2').show();
+                $('.btnX').show();
+                $("#anh-4,#anh-3,#anh-1").hide();
+
+            })
+
+
+
+
+
+
+
+
+            $('#text3').hide();
+            $('.btnX').hide();
+            $('#img3').on('click', function() {
+                $('.img3').css('z-index', 1)
+                $('#img3').css('z-index', 2)
+                $('#anh-3').animate({
+                    'left': "500px",
+                    'width': "500px",
+
+                    'position': "fixed",
+                    'height': "500px",
+                    'left': "50%",
+                    'top': "50%",
+                    'transform': "translateX(-50%) translateY(-50%)"
+                }, 1000)
+                $('#text3').show();
+                $('.btnX').show();
+                $("#anh-4,#anh-1,#anh-2").hide();
+
+            })
+            $('#text4').hide();
+            $('.btnX').hide();
+            $('#img4').on('click', function() {
+                $('.img').css('z-index', 1)
+                $('#img4').css('z-index', 2)
+                $('#anh-4').animate({
+                    'left': "500px",
+                    'width': "500px",
+
+                    'position': "fixed",
+                    'height': "500px",
+                    'left': "50%",
+                    'top': "50%",
+                    'transform': "translateX(-50%) translateY(-50%)"
+                }, 1000)
+                $('#text4').show();
+                $('.btnX').show();
+                $("#anh-1,#anh-3,#anh-2").hide();
+
+            })
+
+
+
+
+            $('.btnX').on('click', function() {
+
+                $('.img1').children('img').animate({
+                    'left': "0px",
+                    'width': "250px",
+                    'height': "250px"
+                }, 1000)
+                $('#text1').hide();
+
+                $('.btnX').hide();
+                $("#anh-4,#anh-3,#anh-2").show();
+
+            })
+            $('.btnX').on('click', function() {
+
+                $('.img1').children('img').animate({
+                    'left': "0px",
+                    'width': "250px",
+                    'height': "250px"
+                }, 1000)
+
+                $('#text2').hide();
+
+                $('.btnX').hide();
+                $("#anh-4,#anh-3,#anh-1").show();
+
+            })
+            $('.btnX').on('click', function() {
+
+                $('.img1').children('img').animate({
+                    'left': "0px",
+                    'width': "250px",
+                    'height': "250px"
+                }, 1000)
+
+                $('#text3').hide();
+
+                $('.btnX').hide();
+                $("#anh-4,#anh-1,#anh-2").show();
+
+            })
+            $('.btnX').on('click', function() {
+
+                $('.img').children('img').animate({
+                    'left': "0px",
+                    'width': "250px",
+                    'height': "250px"
+                }, 1000)
+
+                $('#text4').hide();
+                $('.btnX').hide();
+                $("#anh-4,#anh-3,#anh-2").show();
+
+
+
+            })
+
+
+        })
+    </script>-->
+    <script>
+        $(document).ready(function() {})
+        $('.text').hide();
+        $('.btnX').hide();
+        $('.img').on('click', function() {
+            $('.img').css('z-index', 1);
+            $(this).css('z-index', 2)
+            $(this).find('img').animate({ // tìm tag img chạy animate
+                'position': 'fixed',
+                'top': '50%',
+                'left': '50%',
+                'transform': 'translateX(-50%) translateY(-50%)',
+                'width': "500px",
+                'height': "500px"
+            }, 1000)
+            $('.text').show(); //hiện text
+            $('.btnX').show(); //hiện x
+        })
+        $('.btnX').on('click', function() {
+            $('.img').children('img').animate({
+                'position': 'relative',
+                'transform': 'none',
+                'width': "250px",
+                'height': "250px"
+            }, 1000)
+            $('.text').hide();
+            $('.btnX').hide();
+            $('.container').css({
+                'background': 'rgb(166, 231, 188)'
+            })
+        })
+    </script>
+</body>
+
+</html>

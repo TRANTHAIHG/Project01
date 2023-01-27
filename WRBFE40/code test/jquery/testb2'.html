@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        .container {
+            width: 100%;
+            height: 200px;
+            background-color: red;
+            text-align: center;
+            justify-content: center;
+        }
+        
+        #ipt {
+            width: 60%;
+            height: 50px;
+        }
+        
+        #but {
+            height: 55px;
+        }
+        
+        i {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <i id="but-x" class="fa-solid fa-x"></i>
+        <div id="x-list1">
+            <h1>My To Do List</h1>
+            <div>
+                <input type="text" id="ipt" placeholder="Title...">
+                <button type="button" id="but">ADD</button>
+            </div>
+        </div>
+    </div>
+    <div id="enter">
+        <div id="x-list2"></div>
+    </div>
+    <script>
+        $(document).ready(function() {
+
+                    $('#but').on('click', function() {
+                            if ($('#ipt').val() == 0) {
+                                alert('chưa nhập nội dung')
+                            }
+                            $('#x-list2').append('<li> <p class="element" >' + $('#ipt').val() < /p><button class='Element'>Click me</button > < /li>)
+                            }) $('#enter').on('click', '.element', function() {
+                            alert("clicked element")
+                        })
+                    })
+    </script>
+</body>
+
+</html>

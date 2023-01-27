@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/15.5.4/css/font-awesome.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .container {
+            width: calc(100% - 400px);
+            padding: 0 200px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            line-height: 30px;
+        }
+        
+        .headerLeft {
+            height: 30px;
+            display: flex;
+        }
+        
+        .headerLeft>.logo {
+            height: 30px;
+        }
+        
+        .itemMenu {
+            line-height: 30px;
+            font-size: 20px;
+            margin-left: 25px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .itemMenu:hover {
+            color: dodgerblue;
+        }
+        
+        .btnDownload {
+            background-color: white;
+            border: 1px solid dodgerblue;
+            padding: 5px 15px;
+            font-weight: bold;
+            color: dodgerblue;
+        }
+        
+        .banner {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+            margin-bottom: 70px;
+            align-items: center;
+        }
+        
+        .banner>img {
+            width: 50%;
+        }
+        
+        .contactForm {
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            border-top: 5px solid dodgerblue;
+            max-width: 290px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+        
+        .description {
+            color: grey;
+            font-size: 20px;
+        }
+        
+        .title {
+            font-size: 25px;
+        }
+        
+        .contactForm>p {
+            margin-top: 0;
+        }
+        
+        .contactForm>input {
+            border: 1px solid darkgray;
+            border-radius: 3px;
+            height: 40px;
+            padding: 0 10px;
+            width: 265px;
+        }
+        
+        .contactForm>textarea {
+            width: 265px;
+            border: 1px solid darkgray;
+            border-radius: 3px;
+            padding: 10px 10px 0 10px;
+            color: darkgray;
+            height: 100px;
+        }
+        
+        .btnConfirm {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        .checkboxWrap>input {
+            height: 20px;
+            border-radius: 0;
+            width: 20px;
+            margin: 0 20px 0 0;
+        }
+        
+        .checkboxWrap {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+        
+        .provider {
+            width: 35%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .provider>.title {
+            font-weight: bold;
+            font-size: 25px;
+        }
+        
+        .provider>p {
+            color: grey;
+        }
+        
+        .err {
+            color: red;
+            font-style: italic;
+            text-align: left;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background-color: #00000075;
+        }
+        
+        .modalContent {
+            position: absolute;
+            background-color: white;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 40vw;
+        }
+        
+        .modalContent .title {
+            margin-bottom: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .footer {
+            text-align: right;
+            margin-top: 10px;
+        }
+        
+        .card {
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+        
+        .text2 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .text3 {
+            margin-left: 5px;
+        }
+        
+        .second-banner {
+            width: 100%;
+            height: 400px;
+        }
+        
+        .text-second-banner {
+            width: 50%;
+            color: aliceblue;
+            background-color: blue;
+            float: left;
+            height: 400px;
+        }
+        
+        .img-second-banner {
+            width: 50%;
+            float: left;
+        }
+        
+        img {
+            display: block;
+            max-width: 100%;
+            max-height: 400px;
+            width: auto;
+            height: auto;
+        }
+        
+        .textmini {
+            margin-left: 200px;
+            margin-right: 10px;
+        }
+        
+        .card {
+            box-sizing: border-box;
+        }
+        
+        .anh-2 {
+            display: block;
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            position: absolute;
+        }
+        
+        .left-toggle {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container header">
+        <div class="headerLeft">
+            <img src="asset/logo-dark.png" alt="" class="logo">
+            <div class="itemMenu">Home</div>
+            <div class="itemMenu">Home</div>
+            <div class="itemMenu">Home</div>
+            <div class="itemMenu">Home</div>
+            <div class="itemMenu">Home</div>
+            <div class="itemMenu">Home</div>
+        </div>
+        <div class="headerRight">
+            <button class="btnDownload">DOWNLOAD</button>
+        </div>
+    </div>
+    <div class="container banner">
+        <img src="asset/hero-1-img.png" alt="">
+        <div class="contactForm">
+            <p class="description">Lorem ipsum dolor sit.</p>
+            <p class="title">Lorem ipsum dolor dolor sit.</p>
+            <input type="text" placeholder="Enter your name" id="name" class="inputContact">
+            <p id="errName" class="err"></p>
+            <input type="text" placeholder="Enter your email" id="email" class="inputContact">
+            <p id="errEmail" class="err"></p>
+            <textarea id="message" placeholder="Enter your message" class="inputContact"></textarea>
+            <p id="errMessage" class="err"></p>
+            <div class="checkboxWrap">
+                <input type="checkbox" id="agree"> Lorem ipsum dolor sit amet.
+            </div>
+            <p id="errAgree" class="err"></p>
+            <button class="btnConfirm">SEND INFORMATION</button>
+        </div>
+    </div>
+    <div class="provider">
+        <div class="title">Best we provider</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolore, ducimus eos molestias mollitia necessitatibus.</p>
+    </div>
+    <div class="container cards" style="padding: auto;height: 400px;">
+        <div class="card" style="margin-left:250px ;">
+            <img style="margin-left:40% ;" src="asset/icon-1.png" alt="">
+            <div class="text2"> PRO features</div>
+            <div class="text2">okokokokokokokokokok</div>
+            <div class="text2">learn more</div>
+        </div>
+        <div class="card">
+            <img style="margin-left:40% ;" src="asset/icon-2.png" alt="">
+            <div class="text2"> PRO features</div>
+            <div class="text2">okokokokokokokokokok</div>
+            <div class="text2">learn more</div>
+        </div>
+        <div class="card">
+            <img style="margin-left:40% ;" src="asset/icon-3.png" alt="">
+            <div class="text2"> PRO features</div>
+            <div class="text2">okokokokokokokokokok</div>
+            <div class="text2">learn more</div>
+        </div>
+
+
+    </div>
+    <div class="modal">
+        <div class="modalContent">
+            <div class="title">Chúc mừng bạn đã gửi thông tin thành công</div>
+            <div class="content">
+                <p>Thông tin bạn đã gửi: </p>
+                <p id="resultName"></p>
+                <p id="resultEmail"></p>
+                <p id="resultMessage"></p>
+            </div>
+            <div class="footer">
+                <button id="btnCloseModal">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="second-banner">
+        <div class="text-second-banner">
+            <h3 class="textmini" style="margin-top: 100px;">take a better chance</h3>
+            <h4 class="textmini">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptatem aspernatur co</h4>
+            <h3 class="textmini">@desssss</h3>
+            <h3 class="textmini">@desssss</h3>
+            <h3 class="textmini">@desssss</h3>
+
+        </div>
+        <div class="img-second-banner">
+            <img src="asset/feature-bg.jpg" alt="">
+        </div>
+    </div>
+    <div class="provider" style="padding-top: 50px;">
+        <div class="title">take a besst plant</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolore, ducimus eos molestias mollitia necessitatibus.</p>
+    </div>
+
+    <div class="container cards" style="padding-top: 50px;height: 600px;">
+        <div class="card" style="margin-left:220px ;margin-right: 15px;">
+            <div style="text-align: center;background-image: url(asset/price-1.jpg);display: block;width: 100px;height: 200px;width: auto;">
+                <h3 style="color:white ;padding-top: 15px;"> free</h3>
+                <hr style="width:20px ;">
+                <h3 style="color: white;">basic</h3>
+
+
+            </div>
+            <div class="text3"> PRO features</div>
+            <hr>
+            <div class="text3">okokokokokokokokokok</div>
+            <hr>
+            <div class="text3" style="margin-bottom:5px ;">learn more</div>
+            <div style="color: blue;margin-left: 5px;">start 15 trial day</div>
+        </div>
+        <div class="card" style="margin-left:15px ;margin-right: 15px;">
+            <div style="text-align: center;background-image: url(asset/price-2.jpg);display: block;width: 100px;height: 200px;width: auto;">
+                <h3 style="color:white ;padding-top: 15px;"> free</h3>
+                <hr style="width:20px ;">
+                <h3 style="color: white;">basic</h3>
+
+            </div>
+            <div class="text3"> PRO features</div>
+            <hr>
+            <div class="text3">okokokokokokokokokok</div>
+            <hr>
+            <div class="text3" style="margin-bottom:5px ;">learn more</div>
+            <div style="color: blue;margin-left: 5px;">start 15 trial day</div>
+        </div>
+        <div class="card" style="margin-left:15px ;margin-right: 15px;">
+            <div style="text-align: center;background-image: url(asset/price-3.jpg);display: block;width: 100px;height: 200px;width: auto;">
+                <h3 style="color:white ;padding-top: 15px;"> free</h3>
+                <hr style="width:20px ;">
+                <h3 style="color: white;">basic</h3>
+
+            </div>
+            <div class="text3"> PRO features</div>
+            <hr>
+            <div class="text3">okokokokokokokokokok</div>
+            <hr>
+            <div class="text3" style="margin-bottom:5px ;">learn more</div>
+            <div style="color: blue;margin-left: 5px;">start 15 trial day</div>
+        </div>
+
+
+    </div>
+    <div style="background-color:rgb(175, 173, 173) ;">
+        <div style="margin-left: 720px;"><img src="asset/quote-icon.png" alt=""></div>
+        <h3 style="text-align: center;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quo tempore id fuga autem blanditiis beatae suscipit, quam ab enim nesciunt assumenda sit aliquid possimus amet exercitationem iste harum mollitia!</h3>
+        <h4 style="text-align:center ;"> jessica tyas</h4>
+        <pre> <hr style="width:5px;float: left;margin-right: 5px;margin-left: 730px;"><hr style="width:5px;float: left;margin-right: 5px;"><hr style="width:5px ; float: left;"></pre>
+
+    </div>
+    <div class="anh-2">
+        <img class="anh-2" src="asset/faq-bg.jpg" alt="">
+        <div>
+            <div class="left-toggle">
+                <div>
+                    <div class="button0">
+
+                        <button>Toggle between hiding and showing the paragraphs</button>
+                    </div>
+                    <div>
+                        <p class="class"> This is a paragraph with little content.
+                        </p>
+
+                    </div>
+                </div>
+
+
+
+                <div>
+                    <div class="button1">
+
+                        <button>Toggle between hiding and showing the paragraphs</button>
+                    </div>
+                    <p class="class1">This is a paragraph with little content.</p>
+                    <p class="class1">This is another small paragraph.</p>
+                </div>
+                <div>
+                    <div class="button2">
+
+                        <button>Toggle between hiding and showing the paragraphs</button>
+                    </div>
+                    <p class="class2">This is a paragraph with little content.</p>
+                    <p class="class2">This is another small paragraph.</p>
+                </div>
+                <div>
+                    <div class="button3">
+
+                        <button>Toggle between hiding and showing the paragraphs</button>
+                    </div>
+                    <p class="class3">This is a paragraph with little content.</p>
+                    <p class="class3">This is another small paragraph.</p>
+                </div>
+
+            </div>
+            <div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            //khi click button submit
+            $('.btnConfirm').on('click', function() {
+                    let flag = true
+                    let name = $('#name').val()
+                    let email = $('#email').val()
+                    let message = $('#message').val()
+                    let agree = $('#agree').prop('checked')
+                    if (name.length === 0) {
+                        flag = false
+                        $('#errName').text('Please enter your name!')
+                    } else {
+                        $('#errName').text('')
+                    }
+                    if (email.length === 0) {
+                        flag = false
+                        $('#errEmail').text('Please enter your email!')
+                    } else {
+                        $('#errEmail').text('')
+                    }
+                    if (message.length === 0) {
+                        flag = false
+                        $('#errMessage').text('Please enter message!')
+                    } else {
+                        $('#errMessage').text('')
+                    }
+                    if (!agree) {
+                        flag = false
+                        $('#errAgree').text('Please choose agree!')
+                    } else {
+                        $('#errAgree').text('')
+                    }
+
+                    if (flag) {
+                        $('#resultName').text('Tên: ' + name)
+                        $('#resultEmail').text('Tên: ' + email)
+                        $('#resultMessage').text('Tên: ' + message)
+                        $('.modal').show()
+                    }
+                })
+                //khi nhập vào ô input
+            $('.inputContact').on('keyup', function() {
+                    $(this).next().text('')
+                })
+                //khi check vào ô đồng ý điều khoản
+            $('#agree').on('change', function() {
+                    $('#errAgree').text('')
+                })
+                //khi ấn nút close của modal
+            $('#btnCloseModal').on('click', function() {
+                $('.modal').hide()
+            })
+            $("p").hide();
+
+
+            $(".button0").click(function() {
+                $(".class").toggle();
+                $(".class1,.class2,.class3").hide();
+
+
+
+            });
+            $(".button1").click(function() {
+                $(".class1").toggle();
+                $(".class,.class2,.class3").hide();
+
+
+
+            });
+            $(".button2").click(function() {
+                $(".class2").toggle();
+                $(".class1,.class,.class3").hide();
+
+
+
+            });
+            $(".button3").click(function() {
+                $(".class3").toggle();
+                $(".class1,.class2,.class").hide();
+
+
+
+            });
+        })
+    </script>
+</body>
+
+</html>

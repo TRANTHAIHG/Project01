@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+    <style>
+        p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="zent"> xin chào zent</p>
+    <ul>
+        <li class="mb">hn</li>
+        <li class="mn"> hcm</li>
+        <li class="mb">hp</li>
+
+    </ul>
+    <h4> thẻ h4 - 1</h4>
+    <h4> thẻ h4 - 2</h4>
+    <h4> thẻ h4 - 3</h4>
+    <script>
+        document.getElementById('zent').style.color = 'red';
+        var mb = document.getElementsByClassName('mb')
+        mb[0].style.color = 'blue';
+        var h4 = document.getElementsByTagName('h4')
+        h4[2].style.color = 'green';
+        var zent = document.querySelectorAll('#zent p');
+        zent[0].style.color = 'red';
+    </script>
+
+</body>
+
+</html>
